@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="prototipossit.FXMLVentanaEstudianteController">
+   <children>
+      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="201.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="305.0" layoutY="138.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="52.0" text="Sistema Institucional de Tutorías">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="205.0" text="Docente:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="717.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Letras.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="139.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo1_Uv.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="145.0" layoutY="276.0" prefHeight="150.0" prefWidth="717.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="416.0" text="Programar Horario por Estudiante" />
+            <HBox prefHeight="17.0" prefWidth="416.0">
+               <children>
+                  <Label text="Periodo:" />
+                  <Label text="Agosto 2022 - Enero 2023" />
+                  <Label text="Sesión No:" />
+                  <Label text="1" />
+                  <Label text="Programa Educativo:" />
+                  <Label text="ejemplo" />
+               </children>
+            </HBox>
+            <GridPane gridLinesVisible="true">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Matrícula" />
+                  <Label text="Nombre" GridPane.columnIndex="1" />
+                  <Label text="Día" GridPane.columnIndex="2" />
+                  <Label text="Mes" GridPane.columnIndex="3" />
+                  <Label text="Hora Inicio" GridPane.columnIndex="4" />
+                  <Label text="Hora Fin" GridPane.columnIndex="5" />
+                  <Label text="Modalidad" GridPane.columnIndex="6" />
+                  <Label text="Funcionalidades" GridPane.columnIndex="7" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Button fx:id="btnRegresar" layoutX="451.0" layoutY="528.0" mnemonicParsing="false" text="Regresar">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
