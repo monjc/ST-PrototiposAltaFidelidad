@@ -9,8 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="prototipossit.FXMLVentanaEstudianteController">
+<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaEstudianteController">
    <children>
       <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="201.0">
          <font>
@@ -81,6 +80,45 @@
                   <Label text="Hora Fin" GridPane.columnIndex="5" />
                   <Label text="Modalidad" GridPane.columnIndex="6" />
                   <Label text="Funcionalidades" GridPane.columnIndex="7" />
+                  <Label text="Label" GridPane.rowIndex="1" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+                  <Label text="Label" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Label" GridPane.rowIndex="3" />
+                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                     <children>
+                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
                </children>
             </GridPane>
          </children>
