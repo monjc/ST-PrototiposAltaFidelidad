@@ -82,11 +82,6 @@
                   <Label text="Funcionalidades" GridPane.columnIndex="7" />
                   <Label fx:id="lbMatricula1" text="Label" GridPane.rowIndex="1" />
                   <Label fx:id="lbNombre1" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                      <children>
                         <Button mnemonicParsing="false" text="Editar" />
@@ -97,16 +92,6 @@
                   <Label fx:id="lbNombre2" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label fx:id="lbMatricula3" text="Label" GridPane.rowIndex="3" />
                   <Label fx:id="lbNombre3" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
                      <children>
                         <Button mnemonicParsing="false" text="Editar" />
@@ -119,11 +104,21 @@
                         <Button mnemonicParsing="false" text="Borrar" />
                      </children>
                   </HBox>
+                  <Label fx:id="lbDia1" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="lbMes1" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="lbHrInicio1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label fx:id="lbHrFin1" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label fx:id="lbModalidad1" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Label fx:id="lbDia2" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="lbMes2" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="lbHrInicio2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label fx:id="lbHrFin2" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label fx:id="lbModalidad2" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="btnAgregarHorario" layoutX="790.0" layoutY="525.0" mnemonicParsing="false" text="Añadir">
+      <Button fx:id="btnAñadir" layoutX="790.0" layoutY="525.0" mnemonicParsing="false" text="Añadir">
          <font>
             <Font size="20.0" />
          </font>
