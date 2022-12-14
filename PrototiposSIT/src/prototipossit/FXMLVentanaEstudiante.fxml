@@ -80,8 +80,8 @@
                   <Label text="Hora Fin" GridPane.columnIndex="5" />
                   <Label text="Modalidad" GridPane.columnIndex="6" />
                   <Label text="Funcionalidades" GridPane.columnIndex="7" />
-                  <Label text="Label" GridPane.rowIndex="1" />
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lbMatricula1" text="Label" GridPane.rowIndex="1" />
+                  <Label fx:id="lbNombre1" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
@@ -93,10 +93,10 @@
                         <Button mnemonicParsing="false" text="Button" />
                      </children>
                   </HBox>
-                  <Label text="Label" GridPane.rowIndex="2" />
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label text="Label" GridPane.rowIndex="3" />
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="lbMatricula2" text="Label" GridPane.rowIndex="2" />
+                  <Label fx:id="lbNombre2" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="lbMatricula3" text="Label" GridPane.rowIndex="3" />
+                  <Label fx:id="lbNombre3" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
@@ -123,7 +123,12 @@
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="btnRegresar" layoutX="451.0" layoutY="528.0" mnemonicParsing="false" text="Regresar">
+      <Button fx:id="btnAgregarHorario" layoutX="418.0" layoutY="525.0" mnemonicParsing="false" text="Agregar Horario">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegresar" layoutX="145.0" layoutY="525.0" mnemonicParsing="false" onAction="#regresar" text="Regresar">
          <font>
             <Font size="20.0" />
          </font>
