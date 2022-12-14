@@ -14,6 +14,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -24,14 +27,49 @@ import javafx.stage.Stage;
 public class FXMLVentanaGrupoController implements Initializable {
 
     @FXML
+    private TableColumn<?, ?> cHrInicio;
+
+    @FXML
     private Button btnRegresar;
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private TableColumn<?, ?> cMatricula;
+
+    @FXML
+    private Button btnGuardar;
+
+    @FXML
+    private ComboBox<?> sesion;
+
+    @FXML
+    private TableColumn<?, ?> cHrFin;
+
+    @FXML
+    private TableColumn<?, ?> cMes;
+
+    @FXML
+    private TableColumn<?, ?> cAvance;
+
+    @FXML
+    private TableColumn<?, ?> cDia;
+
+    @FXML
+    private TextField tfDocente;
+
+    @FXML
+    private TableColumn<?, ?> cNombre;
+
+    @FXML
+    private TableColumn<?, ?> cModalidad;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+    
+    @FXML
+    void guardar(ActionEvent event) {
+
     }
 
     @FXML

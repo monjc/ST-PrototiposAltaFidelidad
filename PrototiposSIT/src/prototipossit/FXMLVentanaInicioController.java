@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -25,6 +26,9 @@ import javafx.stage.Stage;
 public class FXMLVentanaInicioController implements Initializable {
 
     @FXML
+    private TextField tfDocente;
+    
+    @FXML
     private ComboBox<String> cbOpcionAgenda;
 
     @FXML
@@ -32,6 +36,7 @@ public class FXMLVentanaInicioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        tfDocente.setText("Docente de Ejemplo");
         cbOpcionAgenda.setItems(FXCollections.observableArrayList("Por estudiante", "Por grupo", "Por horario"));
     }
 

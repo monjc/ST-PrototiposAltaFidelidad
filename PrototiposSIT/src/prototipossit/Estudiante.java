@@ -4,6 +4,8 @@
  */
 package prototipossit;
 
+import javafx.scene.control.Button;
+
 
 /**
  *
@@ -17,7 +19,9 @@ public class Estudiante {
     public String horaInicio;
     public String horaFin;
     public String modalidad;
-    public int Avance;
+    public int avance;
+    private Button editar;
+    private Button eliminar;
 
     public String getHoraInicio() {
         return horaInicio;
@@ -76,17 +80,33 @@ public class Estudiante {
     }
 
     public int getAvance() {
-        return Avance;
+        return avance;
     }
 
-    public void setAvance(int Avance) {
-        this.Avance = Avance;
+    public void setAvance(int avance) {
+        this.avance = avance;
+    }
+
+    public Button getEditar() {
+        return editar;
+    }
+
+    public void setEditar(Button editar) {
+        this.editar = editar;
+    }
+
+    public Button getEliminar() {
+        return eliminar;
+    }
+
+    public void setEliminar(Button eliminar) {
+        this.eliminar = eliminar;
     }
 
     public Estudiante() {
     }
 
-    public Estudiante(String matricula, String nombre, int dia, String mes, String horaInicio, String horaFin, String modalidad, int Avance) {
+    public Estudiante(String matricula, String nombre, int dia, String mes, String horaInicio, String horaFin, String modalidad, int avance) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.dia = dia;
@@ -94,6 +114,8 @@ public class Estudiante {
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.modalidad = modalidad;
-        this.Avance = Avance;
+        this.avance = avance;
+        this.editar = new Button("Editar");
+        this.eliminar = new Button("Eliminar");
     }
 }

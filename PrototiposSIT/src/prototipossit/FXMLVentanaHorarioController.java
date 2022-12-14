@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -24,14 +26,40 @@ import javafx.stage.Stage;
 public class FXMLVentanaHorarioController implements Initializable {
 
     @FXML
+    private TableColumn<?, ?> cHoraFin;
+
+    @FXML
+    private TableColumn<?, ?> cHrInicio;
+
+    @FXML
     private Button btnRegresar;
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private TableColumn<?, ?> cMes;
+
+    @FXML
+    private TableColumn<?, ?> cDia;
+
+    @FXML
+    private Button btnAgregarHorario;
+
+    @FXML
+    private TextField tfDocente;
+
+    @FXML
+    private TableColumn<?, ?> cModalidad;
+
+    @FXML
+    private TableColumn<?, ?> cAcciones;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+    
+    @FXML
+    void agregarHorario(ActionEvent event) {
+
     }
 
     @FXML

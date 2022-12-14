@@ -11,17 +11,12 @@
 
 <AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaEstudianteController">
    <children>
-      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="201.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <Label alignment="CENTER" layoutX="305.0" layoutY="138.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
+      <Label layoutX="308.0" layoutY="52.0" text="Sistema Institucional de Tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="308.0" layoutY="52.0" text="Sistema Institucional de Tutorías">
+      <Label alignment="CENTER" layoutX="305.0" layoutY="138.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
          <font>
             <Font size="20.0" />
          </font>
@@ -31,6 +26,11 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="201.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="717.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Letras.png" />
@@ -54,71 +54,24 @@
                   <Label text="ejemplo" />
                </children>
             </HBox>
-            <GridPane gridLinesVisible="true">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label text="Matrícula" />
-                  <Label text="Nombre" GridPane.columnIndex="1" />
-                  <Label text="Día" GridPane.columnIndex="2" />
-                  <Label text="Mes" GridPane.columnIndex="3" />
-                  <Label text="Hora Inicio" GridPane.columnIndex="4" />
-                  <Label text="Hora Fin" GridPane.columnIndex="5" />
-                  <Label text="Modalidad" GridPane.columnIndex="6" />
-                  <Label text="Funcionalidades" GridPane.columnIndex="7" />
-                  <Label fx:id="lbMatricula1" text="Label" GridPane.rowIndex="1" />
-                  <Label fx:id="lbNombre1" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
-                     <children>
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Borrar" />
-                     </children>
-                  </HBox>
-                  <Label fx:id="lbMatricula2" text="Label" GridPane.rowIndex="2" />
-                  <Label fx:id="lbNombre2" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label fx:id="lbMatricula3" text="Label" GridPane.rowIndex="3" />
-                  <Label fx:id="lbNombre3" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
-                     <children>
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Borrar" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
-                     <children>
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Borrar" />
-                     </children>
-                  </HBox>
-                  <Label fx:id="lbDia1" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label fx:id="lbMes1" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label fx:id="lbHrInicio1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <Label fx:id="lbHrFin1" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <Label fx:id="lbModalidad1" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                  <Label fx:id="lbDia2" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Label fx:id="lbMes2" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Label fx:id="lbHrInicio2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <Label fx:id="lbHrFin2" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <Label fx:id="lbModalidad2" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
+            <TableView fx:id="tEstudiantes" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="cMatricula" prefWidth="75.0" text="Matricula" />
+                <TableColumn fx:id="cNombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="cDia" prefWidth="75.0" text="Dia" />
+                  <TableColumn fx:id="cMes" prefWidth="75.0" text="Mes" />
+                  <TableColumn fx:id="cHrInicio" prefWidth="75.0" text="Hora Inicio" />
+                  <TableColumn fx:id="cHrFin" prefWidth="75.0" text="Hora Fin" />
+                  <TableColumn fx:id="cModalidad" prefWidth="75.0" text="Modalidad" />
+                  <TableColumn fx:id="cAcciones" prefWidth="75.0" text="Acciones" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
          </children>
       </VBox>
-      <Button fx:id="btnAñadir" layoutX="790.0" layoutY="525.0" mnemonicParsing="false" text="Añadir">
+      <Button fx:id="btnAñadir" layoutX="790.0" layoutY="525.0" mnemonicParsing="false" onAction="#añadir" text="Añadir">
          <font>
             <Font size="20.0" />
          </font>
