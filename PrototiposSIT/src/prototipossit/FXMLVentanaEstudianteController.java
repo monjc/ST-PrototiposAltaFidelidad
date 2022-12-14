@@ -16,13 +16,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import prototipossit.Estudiante;
+import static prototipossit.Estudiante.listaEstudiantes;
 
 /**
  * FXML Controller class
@@ -38,23 +37,26 @@ public class FXMLVentanaEstudianteController implements Initializable {
     private Button btnRegresar;
 
     @FXML
-    private Button btnAñadir;
+    private Button btnGuardar;
+
+    @FXML
+    private Button btnActualizar;
 
     @FXML
     private TableView<Estudiante> tEstudiantes;
-    
+
     @FXML
     private TableColumn<Estudiante, String> cMatricula;
 
     @FXML
-    private TableColumn<Estudiante, String> cNombre;  
-    
+    private TableColumn<Estudiante, String> cNombre;
+
     @FXML
     private TableColumn<Estudiante, Integer> cDia;
-    
+
     @FXML
     private TableColumn<Estudiante, String> cMes;
-    
+
     @FXML
     private TableColumn<Estudiante, String> cHrInicio;
 
@@ -63,39 +65,47 @@ public class FXMLVentanaEstudianteController implements Initializable {
 
     @FXML
     private TableColumn<Estudiante, String> cModalidad;
-    
-    @FXML
-    private TableColumn<Estudiante, String> cAcciones; 
 
-    public ObservableList<Estudiante> listaEstudiantes = FXCollections.observableArrayList(
+    @FXML
+    private TableColumn<Estudiante, String> cEditar;
+
+    @FXML
+    private TableColumn<Estudiante, String> cEliminar;
+
+    /*public ObservableList<Estudiante> listaEstudiantes = FXCollections.observableArrayList(
             new Estudiante("s19123456", "Juan Pérez", 19, "Septiembre", "10:00", "10:30", "Virtual", 80),
             new Estudiante("s20789101", "Mario López", 19, "Septiembre", "10:30", "11:00", "presencial", 90),
             new Estudiante("s19543210", "Pedro Gómez", 20, "Septiembre", "11:00", "11:30", "presencial", 40)
-    );
+    );*/
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tfDocente.setText("Docente de Ejemplo");
         llenarTabla();
     }
-    
+
     public void llenarTabla() {
-        cMatricula.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("matricula"));
-        cNombre.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("nombre"));
-        cDia.setCellValueFactory(new PropertyValueFactory<Estudiante, Integer>("dia"));
-        cMes.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("mes"));
-        cHrInicio.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("horaInicio"));
-        cHrFin.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("horaFin"));
-        cModalidad.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("modalidad"));
-        cAcciones.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("editar"));
-        cAcciones.setCellValueFactory(new PropertyValueFactory<Estudiante, String>("eliminar"));
-        
+        cMatricula.setCellValueFactory(new PropertyValueFactory<>("matricula"));
+        cNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        cDia.setCellValueFactory(new PropertyValueFactory<>("dia"));
+        cMes.setCellValueFactory(new PropertyValueFactory<>("mes"));
+        cHrInicio.setCellValueFactory(new PropertyValueFactory<>("horaInicio"));
+        cHrFin.setCellValueFactory(new PropertyValueFactory<>("horaFin"));
+        cModalidad.setCellValueFactory(new PropertyValueFactory<>("modalidad"));
+        cEditar.setCellValueFactory(new PropertyValueFactory<>("editar"));
+        cEliminar.setCellValueFactory(new PropertyValueFactory<>("eliminar"));
+
         tEstudiantes.setItems(listaEstudiantes);
     }
-    
-    @FXML
-    void añadir(ActionEvent event) {
 
+    @FXML
+    void guardar(ActionEvent event) {
+        
+    }
+
+    @FXML
+    void actualizar(ActionEvent event) {
+        listaEstudiantes.clear();
     }
 
     @FXML

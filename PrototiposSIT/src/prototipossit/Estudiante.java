@@ -4,6 +4,8 @@
  */
 package prototipossit;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 
 
@@ -118,4 +120,10 @@ public class Estudiante {
         this.editar = new Button("Editar");
         this.eliminar = new Button("Eliminar");
     }
+    
+    public static ObservableList<Estudiante> listaEstudiantes = FXCollections.observableArrayList(
+            new Estudiante("s19123456", "Juan Pérez", 19, "Septiembre", "10:00", "10:30", "Virtual", 80),
+            new Estudiante("s20789101", "Mario López", 19, "Septiembre", "10:30", "11:00", "presencial", 90),
+            new Estudiante("s19543210", "Pedro Gómez", 20, "Septiembre", "11:00", "11:30", "presencial", 40)
+    );
 }
