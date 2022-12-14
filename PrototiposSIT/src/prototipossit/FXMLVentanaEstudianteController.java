@@ -14,8 +14,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import prototipossit.Estudiante;
 
 /**
  * FXML Controller class
@@ -31,11 +33,39 @@ public class FXMLVentanaEstudianteController implements Initializable {
     private Button btnRegresar;
 
     @FXML
-    Button btnAgregarHorario;
+    private Button btnAgregarHorario;
+
+    @FXML
+    private Label lbMatricula1;
+
+    @FXML
+    private Label lbMatricula2;
+
+    @FXML
+    private Label lbMatricula3;
+
+    @FXML
+    private Label lbNombre1;
+    
+    @FXML
+    private Label lbNombre2;
+    
+    @FXML
+    private Label lbNombre3;
+    
+    Estudiante estudiante1 = new Estudiante("s19123456", "Juan Pérez", 19, "Septiembre", "10:00", "10:30:00", "Virtual", 80);
+    Estudiante estudiante2 = new Estudiante("s20789101", "Mario López", 19, "Septiembre", "10:30", "11:00", "presencial", 90);
+    Estudiante estudiante3 = new Estudiante("s19543210", "Pedro Gómez", 20, "Septiembre", "11:00", "11:30", "presencial", 40);
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        lbMatricula1.setText(estudiante1.getMatricula());
+        lbMatricula2.setText(estudiante2.getMatricula());
+        lbMatricula3.setText(estudiante3.getMatricula());
+        
+        lbNombre1.setText(estudiante1.getNombre());
+        lbNombre2.setText(estudiante2.getNombre());
+        lbNombre3.setText(estudiante3.getNombre());
     }
 
     @FXML

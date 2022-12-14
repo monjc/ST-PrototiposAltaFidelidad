@@ -41,7 +41,7 @@
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <VBox layoutX="145.0" layoutY="276.0" prefHeight="150.0" prefWidth="717.0">
+      <VBox layoutX="111.0" layoutY="288.0" prefHeight="150.0" prefWidth="786.0">
          <children>
             <Label prefHeight="17.0" prefWidth="416.0" text="Programar Horario por Estudiante" />
             <HBox prefHeight="17.0" prefWidth="416.0">
@@ -89,8 +89,8 @@
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Editar" />
+                        <Button mnemonicParsing="false" text="Borrar" />
                      </children>
                   </HBox>
                   <Label fx:id="lbMatricula2" text="Label" GridPane.rowIndex="2" />
@@ -109,21 +109,21 @@
                   <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Editar" />
+                        <Button mnemonicParsing="false" text="Borrar" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button mnemonicParsing="false" text="Button" />
+                        <Button mnemonicParsing="false" text="Editar" />
+                        <Button mnemonicParsing="false" text="Borrar" />
                      </children>
                   </HBox>
                </children>
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="btnAgregarHorario" layoutX="418.0" layoutY="525.0" mnemonicParsing="false" text="Agregar Horario">
+      <Button fx:id="btnAgregarHorario" layoutX="790.0" layoutY="525.0" mnemonicParsing="false" text="Añadir">
          <font>
             <Font size="20.0" />
          </font>
