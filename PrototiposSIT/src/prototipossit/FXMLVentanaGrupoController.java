@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
@@ -203,6 +204,18 @@ public class FXMLVentanaGrupoController implements Initializable {
     @FXML
     private ComboBox cbGrupoDia1;
 
+    @FXML
+    private CheckBox cb1;
+
+    @FXML
+    private CheckBox cb2;
+
+    @FXML
+    private CheckBox cb3;
+
+    @FXML
+    private CheckBox cb4;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         llenarCombosDias();
@@ -214,6 +227,90 @@ public class FXMLVentanaGrupoController implements Initializable {
 
     @FXML
     void guardar(ActionEvent event) {
+
+        if (cb1.isSelected() || cb2.isSelected() || cb3.isSelected() || cb4.isSelected()) {
+            cbGrupoDia2.promptTextProperty().setValue(cbAñadirDia.getSelectionModel().getSelectedItem().toString());
+            cbGrupoMes2.promptTextProperty().setValue(cbAñadirMes.getSelectionModel().getSelectedItem().toString());
+            cbGrupoHrI2.promptTextProperty().setValue(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
+            cbGrupoHrF2.promptTextProperty().setValue(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
+            cbGrupoModalidad2.promptTextProperty().setValue(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+            cbGrupoDia2.setDisable(true);
+            cbGrupoMes2.setDisable(true);
+            cbGrupoHrI2.setDisable(true);
+            cbGrupoHrF2.setDisable(true);
+            cbGrupoModalidad2.setDisable(true);
+
+            if (cb1.isSelected()) {
+                cbDia1.valueProperty().set(cbAñadirDia.getSelectionModel().getSelectedItem().toString());
+                cbMes1.valueProperty().set(cbAñadirMes.getSelectionModel().getSelectedItem().toString());
+                cbHrI1.valueProperty().set(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
+                cbHrF1.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
+                cbModalidad1.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+                cbDia1.setDisable(true);
+                cbMes1.setDisable(true);
+                cbHrI1.setDisable(true);
+                cbHrF1.setDisable(true);
+                cbModalidad1.setDisable(true);
+
+                cb1.setSelected(false);
+            }
+
+            if (cb2.isSelected()) {
+                cbDia2.valueProperty().set(cbAñadirDia.getSelectionModel().getSelectedItem().toString());
+                cbMes2.valueProperty().set(cbAñadirMes.getSelectionModel().getSelectedItem().toString());
+                cbHrI2.valueProperty().set(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
+                cbHrF2.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
+                cbModalidad2.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+                cbDia2.setDisable(true);
+                cbMes2.setDisable(true);
+                cbHrI2.setDisable(true);
+                cbHrF2.setDisable(true);
+                cbModalidad2.setDisable(true);
+
+                cb2.setSelected(false);
+            }
+
+            if (cb3.isSelected()) {
+                cbDia3.valueProperty().set(cbAñadirDia.getSelectionModel().getSelectedItem().toString());
+                cbMes3.valueProperty().set(cbAñadirMes.getSelectionModel().getSelectedItem().toString());
+                cbHrI3.valueProperty().set(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
+                cbHrF3.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
+                cbModalidad3.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+                cbDia3.setDisable(true);
+                cbMes3.setDisable(true);
+                cbHrI3.setDisable(true);
+                cbHrF3.setDisable(true);
+                cbModalidad3.setDisable(true);
+
+                cb3.setSelected(false);
+            }
+
+            if (cb4.isSelected()) {
+                cbDia4.valueProperty().set(cbAñadirDia.getSelectionModel().getSelectedItem().toString());
+                cbMes4.valueProperty().set(cbAñadirMes.getSelectionModel().getSelectedItem().toString());
+                cbHrI4.valueProperty().set(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
+                cbHrF4.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
+                cbModalidad4.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+                cbDia4.setDisable(true);
+                cbMes4.setDisable(true);
+                cbHrI4.setDisable(true);
+                cbHrF4.setDisable(true);
+                cbModalidad4.setDisable(true);
+
+                cb4.setSelected(false);
+            }
+
+            cbAñadirDia.valueProperty().set(null);
+            cbAñadirMes.valueProperty().set(null);
+            cbAñadirHrI.valueProperty().set(null);
+            cbAñadirHrFin.valueProperty().set(null);
+            cbAñadirModalidad.valueProperty().set(null);
+        }
 
     }
 
@@ -263,7 +360,7 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI2.setItems(horasI);
         cbHrI3.setItems(horasI);
         cbHrI4.setItems(horasI);
-        
+
         cbGrupoHrI1.setItems(horasI);
         cbGrupoHrI2.setItems(horasI);
 
@@ -277,10 +374,10 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrF2.setItems(horasF);
         cbHrF3.setItems(horasF);
         cbHrF4.setItems(horasF);
-        
+
         cbGrupoHrF1.setItems(horasF);
         cbGrupoHrF2.setItems(horasF);
-        
+
         cbAñadirHrFin.setItems(horasF);
     }
 
@@ -290,12 +387,161 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbModalidad2.setItems(modalidad);
         cbModalidad3.setItems(modalidad);
         cbModalidad4.setItems(modalidad);
-        
+
         cbGrupoModalidad1.setItems(modalidad);
         cbGrupoModalidad2.setItems(modalidad);
-        
+
         cbAñadirModalidad.setItems(modalidad);
 
+    }
+    
+    @FXML
+    void editar1(ActionEvent event) {
+        
+        cbDia1.setDisable(false);
+        cbMes1.setDisable(false);
+        cbHrI1.setDisable(false);
+        cbHrF1.setDisable(false);
+        cbModalidad1.setDisable(false);
+
+    }
+    
+    @FXML
+    void eliminar1(ActionEvent event) {
+        cbDia1.setValue("");
+        cbMes1.setValue("");
+        cbHrI1.setValue("");
+        cbHrF1.setValue("");
+        cbModalidad1.setValue("");
+        
+        cbDia1.setDisable(false);
+        cbMes1.setDisable(false);
+        cbHrI1.setDisable(false);
+        cbHrF1.setDisable(false);
+        cbModalidad1.setDisable(false);
+    }
+
+    @FXML
+    void editar2(ActionEvent event) {
+        cbDia2.setDisable(false);
+        cbMes2.setDisable(false);
+        cbHrI2.setDisable(false);
+        cbHrF2.setDisable(false);
+        cbModalidad2.setDisable(false);
+
+    }
+
+    @FXML
+    void eliminar2(ActionEvent event) {
+        cbDia2.setValue("");
+        cbMes2.setValue("");
+        cbHrI2.setValue("");
+        cbHrF2.setValue("");
+        cbModalidad2.setValue("");
+        
+        cbDia2.setDisable(false);
+        cbMes2.setDisable(false);
+        cbHrI2.setDisable(false);
+        cbHrF2.setDisable(false);
+        cbModalidad2.setDisable(false);
+    }
+
+    @FXML
+    void editar3(ActionEvent event) {
+        cbDia3.setDisable(false);
+        cbMes3.setDisable(false);
+        cbHrI3.setDisable(false);
+        cbHrF3.setDisable(false);
+        cbModalidad3.setDisable(false);
+
+    }
+
+    @FXML
+    void eliminar3(ActionEvent event) {
+        cbDia3.setValue("");
+        cbMes3.setValue("");
+        cbHrI3.setValue("");
+        cbHrF3.setValue("");
+        cbModalidad3.setValue("");
+        
+        cbDia3.setDisable(false);
+        cbMes3.setDisable(false);
+        cbHrI3.setDisable(false);
+        cbHrF3.setDisable(false);
+        cbModalidad3.setDisable(false);
+    }
+
+    @FXML
+    void editar4(ActionEvent event) {
+        cbDia4.setDisable(false);
+        cbMes4.setDisable(false);
+        cbHrI4.setDisable(false);
+        cbHrF4.setDisable(false);
+        cbModalidad4.setDisable(false);
+    }
+
+    @FXML
+    void eliminar4(ActionEvent event) {
+        cbDia4.setValue("");
+        cbMes4.setValue("");
+        cbHrI4.setValue("");
+        cbHrF4.setValue("");
+        cbModalidad4.setValue("");
+        
+        cbDia4.setDisable(false);
+        cbMes4.setDisable(false);
+        cbHrI4.setDisable(false);
+        cbHrF4.setDisable(false);
+        cbModalidad4.setDisable(false);
+    }
+
+    @FXML
+    void editarGrupo1(ActionEvent event) {
+        cbGrupoDia1.setDisable(false);
+        cbGrupoMes1.setDisable(false);
+        cbGrupoHrI1.setDisable(false);
+        cbGrupoHrF1.setDisable(false);
+        cbGrupoModalidad1.setDisable(false);
+
+    }
+
+    @FXML
+    void eliminarGrupo1(ActionEvent event) {
+        cbGrupoDia1.setValue("");
+        cbGrupoMes1.setValue("");
+        cbGrupoHrI1.setValue("");
+        cbGrupoHrF1.setValue("");
+        cbGrupoModalidad1.setValue("");
+        
+        cbGrupoDia1.setDisable(false);
+        cbGrupoMes1.setDisable(false);
+        cbGrupoHrI1.setDisable(false);
+        cbGrupoHrF1.setDisable(false);
+        cbGrupoModalidad1.setDisable(false);
+    }
+
+    @FXML
+    void editarGrupo2(ActionEvent event) {
+        cbGrupoDia2.setDisable(false);
+        cbGrupoMes2.setDisable(false);
+        cbGrupoHrI2.setDisable(false);
+        cbGrupoHrF2.setDisable(false);
+        cbGrupoModalidad2.setDisable(false);
+    }
+
+    @FXML
+    void eliminarGrupo2(ActionEvent event) {
+        cbGrupoDia2.setValue("");
+        cbGrupoMes2.setValue("");
+        cbGrupoHrI2.setValue("");
+        cbGrupoHrF2.setValue("");
+        cbGrupoModalidad2.setValue("");
+        
+        cbGrupoDia2.setDisable(false);
+        cbGrupoMes2.setDisable(false);
+        cbGrupoHrI2.setDisable(false);
+        cbGrupoHrF2.setDisable(false);
+        cbGrupoModalidad2.setDisable(false);
     }
 
 }
