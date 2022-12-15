@@ -9,40 +9,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaInicioController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="129.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="707.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="807.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Letras.png" />
          </image>
       </ImageView>
-      <Label layoutX="405.0" layoutY="195.0" text="Docente:">
+      <Label layoutX="349.0" layoutY="135.0" text="Docente:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="298.0" layoutY="42.0" text="Sistema Institucional de Tutorías">
+      <Label layoutX="361.0" layoutY="41.0" text="Sistema Institucional de Tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="384.0" layoutY="122.0" text="Tutoría Académica - Agenda de tutorías">
+      <Label layoutX="328.0" layoutY="87.0" text="Tutoría Académica - Agenda de tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="tfDocente" editable="false" layoutX="491.0" layoutY="191.0">
+      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="131.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <VBox alignment="CENTER" layoutX="441.0" layoutY="266.0" prefHeight="138.0" prefWidth="285.0">
+      <VBox alignment="CENTER" layoutX="361.0" layoutY="275.0" prefHeight="44.0" prefWidth="285.0">
          <children>
             <Label text="Elija una opción para programar su agenda">
                <font>
@@ -52,7 +51,7 @@
             <ComboBox fx:id="cbOpcionAgenda" prefHeight="25.0" prefWidth="299.0" />
          </children>
       </VBox>
-      <Button fx:id="btnAgendar" layoutX="531.0" layoutY="486.0" mnemonicParsing="false" onAction="#agendar" style="-fx-background-color: #0288D2;" text="Agendar" textFill="WHITE">
+      <Button fx:id="btnAgendar" layoutX="452.0" layoutY="480.0" mnemonicParsing="false" onAction="#agendar" style="-fx-background-color: #0288D2;" text="Agendar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

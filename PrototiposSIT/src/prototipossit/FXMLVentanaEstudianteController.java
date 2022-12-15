@@ -209,11 +209,23 @@ public class FXMLVentanaEstudianteController implements Initializable {
 
     @FXML
     void eliminar1(ActionEvent event) {
+        cbDia1.setDisable(false);
+        cbMes1.setDisable(false);
+        cbHrI1.setDisable(false);
+        cbHrF1.setDisable(false);
+        cbModalidad1.setDisable(false);
+        
         cbDia1.promptTextProperty().setValue("");
         cbMes1.promptTextProperty().setValue("");
         cbHrI1.promptTextProperty().setValue("");
         cbHrF1.promptTextProperty().setValue("");
         cbModalidad1.promptTextProperty().setValue("");
+
+        cbDia1.setDisable(true);
+        cbMes1.setDisable(true);
+        cbHrI1.setDisable(true);
+        cbHrF1.setDisable(true);
+        cbModalidad1.setDisable(true);
     }
 
     @FXML
@@ -227,11 +239,24 @@ public class FXMLVentanaEstudianteController implements Initializable {
 
     @FXML
     void eliminar2(ActionEvent event) {
+        
+        cbDia2.setDisable(false);
+        cbMes2.setDisable(false);
+        cbHrI2.setDisable(false);
+        cbHrF2.setDisable(false);
+        cbModalidad2.setDisable(false);
+        
         cbDia2.promptTextProperty().setValue("");
         cbMes2.promptTextProperty().setValue("");
         cbHrI2.promptTextProperty().setValue("");
         cbHrF2.promptTextProperty().setValue("");
         cbModalidad2.promptTextProperty().setValue("");
+        
+        cbDia2.setDisable(true);
+        cbMes2.setDisable(true);
+        cbHrI2.setDisable(true);
+        cbHrF2.setDisable(true);
+        cbModalidad2.setDisable(true);
     }
 
     @FXML
@@ -245,11 +270,24 @@ public class FXMLVentanaEstudianteController implements Initializable {
 
     @FXML
     void eliminar3(ActionEvent event) {
+        
+        cbDia3.setDisable(false);
+        cbMes3.setDisable(false);
+        cbHrI3.setDisable(false);
+        cbHrF3.setDisable(false);
+        cbModalidad3.setDisable(false);
+        
         cbDia3.promptTextProperty().setValue("");
         cbMes3.promptTextProperty().setValue("");
         cbHrI3.promptTextProperty().setValue("");
         cbHrF3.promptTextProperty().setValue("");
         cbModalidad3.promptTextProperty().setValue("");
+        
+        cbDia3.setDisable(true);
+        cbMes3.setDisable(true);
+        cbHrI3.setDisable(true);
+        cbHrF3.setDisable(true);
+        cbModalidad3.setDisable(true);
     }
 
     @FXML
@@ -257,23 +295,23 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbDia1.setDisable(true);
         cbDia2.setDisable(true);
         cbDia3.setDisable(true);
-        
+
         cbMes1.setDisable(true);
         cbMes2.setDisable(true);
         cbMes3.setDisable(true);
-        
+
         cbHrI1.setDisable(true);
         cbHrI2.setDisable(true);
         cbHrI3.setDisable(true);
-        
+
         cbHrF1.setDisable(true);
         cbHrF2.setDisable(true);
         cbHrF3.setDisable(true);
-        
+
         cbModalidad1.setDisable(true);
         cbModalidad2.setDisable(true);
         cbModalidad3.setDisable(true);
-        
+
     }
 
     @FXML

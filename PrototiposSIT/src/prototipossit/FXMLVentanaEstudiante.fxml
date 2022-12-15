@@ -11,37 +11,37 @@
 
 <AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaEstudianteController">
    <children>
-      <Label layoutX="308.0" layoutY="52.0" text="Sistema Institucional de Tutorías">
+      <Label layoutX="361.0" layoutY="24.0" text="Sistema Institucional de Tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="305.0" layoutY="138.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
+      <Label alignment="CENTER" layoutX="261.0" layoutY="73.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="349.0" layoutY="205.0" text="Docente:">
+      <Label layoutX="349.0" layoutY="128.0" text="Docente:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="201.0">
+      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="124.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="717.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="807.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Letras.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="139.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <VBox layoutX="108.0" layoutY="292.0" prefHeight="226.0" prefWidth="879.0">
+      <VBox layoutX="64.0" layoutY="220.0" prefHeight="226.0" prefWidth="879.0">
          <children>
             <Label prefHeight="17.0" prefWidth="416.0" text="Programar Horario por Estudiante">
                <font>
