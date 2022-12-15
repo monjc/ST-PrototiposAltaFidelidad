@@ -8,39 +8,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaGrupoController">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaGrupoController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="242.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="801.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1041.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Letras.png" />
          </image>
       </ImageView>
-      <Label layoutX="349.0" layoutY="103.0" text="Docente:">
+      <Label layoutX="589.0" layoutY="224.0" text="Docente:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="362.0" layoutY="14.0" text="Sistema Institucional de Tutorías">
+      <Label layoutX="602.0" layoutY="135.0" text="Sistema Institucional de Tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="279.0" layoutY="62.0" text="Tutoría Académica - Agenda de tutorías por Grupo">
+      <Label alignment="CENTER" layoutX="519.0" layoutY="183.0" text="Tutoría Académica - Agenda de tutorías por Grupo">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="99.0">
+      <TextField fx:id="tfDocente" editable="false" layoutX="675.0" layoutY="220.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <VBox layoutX="74.0" layoutY="188.0" prefHeight="236.0" prefWidth="862.0">
+      <VBox layoutX="314.0" layoutY="309.0" prefHeight="236.0" prefWidth="862.0">
          <children>
             <Label text="Programar Agenda por Grupo">
                <font>
@@ -72,6 +72,7 @@
                   <ComboBox prefHeight="32.0" prefWidth="205.0" promptText="Tecnologías Computacionales" />
                </children>
             </HBox>
+            <Label />
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="13.0" />
@@ -197,7 +198,7 @@
             </GridPane>
          </children>
       </VBox>
-      <GridPane layoutX="179.0" layoutY="424.0" prefHeight="101.0" prefWidth="700.0">
+      <GridPane layoutX="419.0" layoutY="545.0" prefHeight="101.0" prefWidth="700.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -254,7 +255,7 @@
             </HBox>
          </children>
       </GridPane>
-      <GridPane layoutX="227.0" layoutY="534.0" prefHeight="60.0" prefWidth="554.0">
+      <GridPane layoutX="467.0" layoutY="655.0" prefHeight="60.0" prefWidth="554.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -279,15 +280,15 @@
             <ComboBox fx:id="cbAñadirModalidad" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Button fx:id="btnGuardar" layoutX="801.0" layoutY="542.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
+      <Button fx:id="btnGuardar" layoutX="1041.0" layoutY="663.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button fx:id="btnRegresar" layoutX="73.0" layoutY="550.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
+      <Button fx:id="btnRegresar" layoutX="313.0" layoutY="671.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="179.0" layoutY="407.0" text="Horarios" />
+      <Label layoutX="419.0" layoutY="528.0" text="Horarios" />
    </children>
 </AnchorPane>

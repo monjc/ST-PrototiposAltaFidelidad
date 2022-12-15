@@ -135,42 +135,98 @@ public class FXMLVentanaHorarioController implements Initializable {
 
     @FXML
     void editar1(ActionEvent event) {
-
+        cbDia1.setDisable(false);
+        cbMes1.setDisable(false);
+        cbHrI1.setDisable(false);
+        cbHrF1.setDisable(false);
+        cbModalidad1.setDisable(false);
     }
 
     @FXML
     void eliminar1(ActionEvent event) {
+        cbDia1.setDisable(false);
+        cbMes1.setDisable(false);
+        cbHrI1.setDisable(false);
+        cbHrF1.setDisable(false);
+        cbModalidad1.setDisable(false);
 
+        cbDia1.setValue("");
+        cbMes1.setValue("");
+        cbHrI1.setValue("");
+        cbHrF1.setValue("");
+        cbModalidad1.setValue("");
     }
 
     @FXML
     void editar2(ActionEvent event) {
-
+        cbDia2.setDisable(false);
+        cbMes2.setDisable(false);
+        cbHrI2.setDisable(false);
+        cbHrF2.setDisable(false);
+        cbModalidad2.setDisable(false);
     }
 
     @FXML
     void eliminar2(ActionEvent event) {
+        cbDia2.setValue("");
+        cbMes2.setValue("");
+        cbHrI2.setValue("");
+        cbHrF2.setValue("");
+        cbModalidad2.setValue("");
 
+        cbDia2.setDisable(false);
+        cbMes2.setDisable(false);
+        cbHrI2.setDisable(false);
+        cbHrF2.setDisable(false);
+        cbModalidad2.setDisable(false);
     }
 
     @FXML
     void editar3(ActionEvent event) {
-
+        cbDia3.setDisable(false);
+        cbMes3.setDisable(false);
+        cbHrI3.setDisable(false);
+        cbHrF3.setDisable(false);
+        cbModalidad3.setDisable(false);
     }
 
     @FXML
     void eliminar3(ActionEvent event) {
+        cbDia3.setValue("");
+        cbMes3.setValue("");
+        cbHrI3.setValue("");
+        cbHrF3.setValue("");
+        cbModalidad3.setValue("");
 
+        cbDia3.setDisable(false);
+        cbMes3.setDisable(false);
+        cbHrI3.setDisable(false);
+        cbHrF3.setDisable(false);
+        cbModalidad3.setDisable(false);
     }
 
     @FXML
     void editar4(ActionEvent event) {
-
+        cbDia4.setDisable(false);
+        cbMes4.setDisable(false);
+        cbHrI4.setDisable(false);
+        cbHrF4.setDisable(false);
+        cbModalidad4.setDisable(false);
     }
 
     @FXML
     void eliminar4(ActionEvent event) {
+        cbDia4.setValue("");
+        cbMes4.setValue("");
+        cbHrI4.setValue("");
+        cbHrF4.setValue("");
+        cbModalidad4.setValue("");
 
+        cbDia4.setDisable(false);
+        cbMes4.setDisable(false);
+        cbHrI4.setDisable(false);
+        cbHrF4.setDisable(false);
+        cbModalidad4.setDisable(false);
     }
 
     @FXML
@@ -224,5 +280,43 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbModalidad2.setItems(modalidad);
         cbModalidad3.setItems(modalidad);
         cbModalidad4.setItems(modalidad);
+    }
+    
+    @FXML
+    void guardar1(ActionEvent event){
+        
+        cbDia1.setDisable(true);
+        cbMes1.setDisable(true);
+        cbHrI1.setDisable(true);
+        cbHrF1.setDisable(true);
+        cbModalidad1.setDisable(true);
+        
+    }
+    
+    @FXML
+    void guardar2(ActionEvent event){
+        cbDia2.setDisable(true);
+        cbMes2.setDisable(true);
+        cbHrI2.setDisable(true);
+        cbHrF2.setDisable(true);
+        cbModalidad2.setDisable(true);
+    }
+    
+    @FXML
+    void guardar3(ActionEvent event){
+        cbDia3.setDisable(true);
+        cbMes3.setDisable(true);
+        cbHrI3.setDisable(true);
+        cbHrF3.setDisable(true);
+        cbModalidad3.setDisable(true);
+    }
+    
+    @FXML
+    void guardar4(ActionEvent event){
+        cbDia4.setDisable(true);
+        cbMes4.setDisable(true);
+        cbHrI4.setDisable(true);
+        cbHrF4.setDisable(true);
+        cbModalidad4.setDisable(true);
     }
 }
