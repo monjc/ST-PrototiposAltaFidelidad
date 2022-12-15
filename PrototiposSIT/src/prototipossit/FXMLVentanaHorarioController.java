@@ -103,6 +103,9 @@ public class FXMLVentanaHorarioController implements Initializable {
 
     @FXML
     private Button btnEliminar4;
+    
+    @FXML
+    private Button btnGuardar4;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -113,6 +116,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbModalidad4.setVisible(false);
         btnEditar4.setVisible(false);
         btnEliminar4.setVisible(false);
+        btnGuardar4.setVisible(false);
 
         llenarCombosDias();
         llenarCombosMeses();

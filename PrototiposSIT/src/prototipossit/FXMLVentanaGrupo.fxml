@@ -40,7 +40,7 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <VBox layoutX="314.0" layoutY="309.0" prefHeight="236.0" prefWidth="862.0">
+      <VBox layoutX="228.0" layoutY="332.0" prefHeight="236.0" prefWidth="1032.0">
          <children>
             <Label text="Programar Agenda por Grupo">
                <font>
@@ -198,7 +198,7 @@
             </GridPane>
          </children>
       </VBox>
-      <GridPane layoutX="419.0" layoutY="545.0" prefHeight="101.0" prefWidth="700.0">
+      <GridPane layoutX="437.0" layoutY="651.0" prefHeight="101.0" prefWidth="700.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -255,7 +255,7 @@
             </HBox>
          </children>
       </GridPane>
-      <GridPane layoutX="467.0" layoutY="655.0" prefHeight="60.0" prefWidth="554.0">
+      <GridPane layoutX="467.0" layoutY="805.0" prefHeight="60.0" prefWidth="554.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -280,15 +280,15 @@
             <ComboBox fx:id="cbAñadirModalidad" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Button fx:id="btnGuardar" layoutX="1041.0" layoutY="663.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
+      <Button fx:id="btnGuardar" layoutX="1041.0" layoutY="820.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
-      <Button fx:id="btnRegresar" layoutX="313.0" layoutY="671.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
+      <Button fx:id="btnRegresar" layoutX="242.0" layoutY="806.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Label layoutX="419.0" layoutY="528.0" text="Horarios" />
+      <Label layoutX="437.0" layoutY="611.0" text="Horarios" />
    </children>
 </AnchorPane>
