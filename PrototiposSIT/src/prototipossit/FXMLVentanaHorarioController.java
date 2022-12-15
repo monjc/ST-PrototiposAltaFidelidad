@@ -134,6 +134,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbModalidad4.setVisible(true);
         btnEditar4.setVisible(true);
         btnEliminar4.setVisible(true);
+        btnGuardar4.setVisible(true);
 
     }
 
