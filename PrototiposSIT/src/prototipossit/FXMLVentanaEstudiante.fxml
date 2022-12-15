@@ -116,20 +116,20 @@
                   <Label fx:id="nombre2" text="María López" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label fx:id="matricula3" text="S19543210" GridPane.rowIndex="3" />
                   <Label fx:id="nombre3" text="Pedro Gómez" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <ComboBox fx:id="cbDia1" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <ComboBox fx:id="cbDia2" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbDia1" disable="true" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbDia2" disable="true" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                   <ComboBox fx:id="cbDia3" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <ComboBox fx:id="cbMes1" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <ComboBox fx:id="cbMes2" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbMes1" disable="true" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbMes2" disable="true" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <ComboBox fx:id="cbMes3" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <ComboBox fx:id="cbHrI1" prefWidth="150.0" promptText="10:00" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <ComboBox fx:id="cbHrI2" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbHrI1" disable="true" prefWidth="150.0" promptText="10:00" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbHrI2" disable="true" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                   <ComboBox fx:id="cbHrI3" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <ComboBox fx:id="cbHrF1" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <ComboBox fx:id="cbHrF2" prefWidth="150.0" promptText="11:00" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbHrF1" disable="true" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbHrF2" disable="true" prefWidth="150.0" promptText="11:00" GridPane.columnIndex="5" GridPane.rowIndex="2" />
                   <ComboBox fx:id="cbHrF3" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  <ComboBox fx:id="cbModalidad1" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                  <ComboBox fx:id="cbModalidad2" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbModalidad1" disable="true" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbModalidad2" disable="true" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <ComboBox fx:id="cbModalidad3" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                </children>
             </GridPane>

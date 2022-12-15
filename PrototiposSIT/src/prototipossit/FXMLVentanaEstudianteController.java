@@ -140,62 +140,36 @@ public class FXMLVentanaEstudianteController implements Initializable {
     public void llenarCombosDias() {
         ObservableList<String> dias = FXCollections.observableList(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"));
         cbDia1.setItems(dias);
-        cbDia1.setDisable(true);
-
         cbDia2.setItems(dias);
-        cbDia2.setDisable(true);
-
         cbDia3.setItems(dias);
-        cbDia3.setDisable(true);
     }
 
     public void llenarCombosMeses() {
         ObservableList<String> meses = FXCollections.observableList(Arrays.asList("Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", "Enero"));
         cbMes1.setItems(meses);
-        cbMes1.setDisable(true);
-
         cbMes2.setItems(meses);
-        cbMes2.setDisable(true);
-
         cbMes3.setItems(meses);
-        cbMes3.setDisable(true);
-
     }
 
     public void llenarCombosHorasInicio() {
         ObservableList<String> horasI = FXCollections.observableList(Arrays.asList("07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"));
         cbHrI1.setItems(horasI);
-        cbHrI1.setDisable(true);
-
         cbHrI2.setItems(horasI);
-        cbHrI2.setDisable(true);
-
         cbHrI3.setItems(horasI);
-        cbHrI3.setDisable(true);
     }
 
     public void llenarCombosHorasFin() {
         ObservableList<String> horasF = FXCollections.observableList(Arrays.asList("07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00"));
         cbHrF1.setItems(horasF);
-        cbHrF1.setDisable(true);
-
         cbHrF2.setItems(horasF);
-        cbHrF2.setDisable(true);
-
         cbHrF3.setItems(horasF);
-        cbHrF3.setDisable(true);
     }
 
     public void llenarCombosModalidad() {
         ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "Virtual"));
         cbModalidad1.setItems(modalidad);
-        cbModalidad1.setDisable(true);
-
         cbModalidad2.setItems(modalidad);
-        cbModalidad2.setDisable(true);
-
         cbModalidad3.setItems(modalidad);
-        cbModalidad3.setDisable(true);
     }
 
     @FXML
@@ -215,17 +189,11 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF1.setDisable(false);
         cbModalidad1.setDisable(false);
         
-        cbDia1.promptTextProperty().setValue("");
-        cbMes1.promptTextProperty().setValue("");
-        cbHrI1.promptTextProperty().setValue("");
-        cbHrF1.promptTextProperty().setValue("");
-        cbModalidad1.promptTextProperty().setValue("");
-
-        cbDia1.setDisable(true);
-        cbMes1.setDisable(true);
-        cbHrI1.setDisable(true);
-        cbHrF1.setDisable(true);
-        cbModalidad1.setDisable(true);
+        cbDia1.setValue("");
+        cbMes1.setValue("");
+        cbHrI1.setValue("");
+        cbHrF1.setValue("");
+        cbModalidad1.setValue("");
     }
 
     @FXML
@@ -246,17 +214,11 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF2.setDisable(false);
         cbModalidad2.setDisable(false);
         
-        cbDia2.promptTextProperty().setValue("");
-        cbMes2.promptTextProperty().setValue("");
-        cbHrI2.promptTextProperty().setValue("");
-        cbHrF2.promptTextProperty().setValue("");
-        cbModalidad2.promptTextProperty().setValue("");
-        
-        cbDia2.setDisable(true);
-        cbMes2.setDisable(true);
-        cbHrI2.setDisable(true);
-        cbHrF2.setDisable(true);
-        cbModalidad2.setDisable(true);
+        cbDia2.setValue("");
+        cbMes2.setValue("");
+        cbHrI2.setValue("");
+        cbHrF2.setValue("");
+        cbModalidad2.setValue("");
     }
 
     @FXML
@@ -277,17 +239,11 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF3.setDisable(false);
         cbModalidad3.setDisable(false);
         
-        cbDia3.promptTextProperty().setValue("");
-        cbMes3.promptTextProperty().setValue("");
-        cbHrI3.promptTextProperty().setValue("");
-        cbHrF3.promptTextProperty().setValue("");
-        cbModalidad3.promptTextProperty().setValue("");
-        
-        cbDia3.setDisable(true);
-        cbMes3.setDisable(true);
-        cbHrI3.setDisable(true);
-        cbHrF3.setDisable(true);
-        cbModalidad3.setDisable(true);
+        cbDia3.setValue("");
+        cbMes3.setValue("");
+        cbHrI3.setValue("");
+        cbHrF3.setValue("");
+        cbModalidad3.setValue("");
     }
 
     @FXML
