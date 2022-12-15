@@ -86,6 +86,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label text="Día" />
@@ -94,37 +95,48 @@
                   <Label text="Hora Fin" GridPane.columnIndex="3" />
                   <Label text="Modalidad" GridPane.columnIndex="4" />
                   <Label text="Acciones" GridPane.columnIndex="5" />
-                  <ComboBox prefWidth="150.0" promptText="07" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" promptText="Noviembre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" promptText="08:00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" promptText="08:30" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" promptText="Sin asignar" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <ComboBox prefWidth="150.0" promptText="07" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" promptText="Noviembre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" promptText="08:30" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" promptText="09:00" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" promptText="Sin asignar" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <ComboBox prefWidth="150.0" promptText="08" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" promptText="Noviembre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" promptText="09:00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" promptText="10:00" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbDia1" prefWidth="150.0" promptText="7" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbMes1" prefWidth="150.0" promptText="Noviembre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbHrI1" prefWidth="150.0" promptText="08:00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbHrF1" prefWidth="150.0" promptText="08:30" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbModalidad1" prefWidth="150.0" promptText="Por elegir" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbDia2" prefWidth="150.0" promptText="7" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbMes2" prefWidth="150.0" promptText="Noviembre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbHrI2" prefWidth="150.0" promptText="08:30" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbHrF2" prefWidth="150.0" promptText="09:00" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbModalidad2" prefWidth="150.0" promptText="Por elegir" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbDia3" prefWidth="150.0" promptText="8" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbMes3" prefWidth="150.0" promptText="Noviembre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbHrI3" prefWidth="150.0" promptText="09:00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbHrF3" prefWidth="150.0" promptText="10:00" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbModalidad3" prefWidth="150.0" promptText="Por elegir" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
                      <children>
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Eliminar" />
+                        <Button mnemonicParsing="false" onAction="#editar1" text="Editar" />
+                        <Button mnemonicParsing="false" onAction="#eliminar1" text="Eliminar" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Eliminar" />
+                        <Button mnemonicParsing="false" onAction="#editar2" text="Editar" />
+                        <Button mnemonicParsing="false" onAction="#eliminar2" text="Eliminar" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
                      <children>
-                        <Button mnemonicParsing="false" text="Editar" />
-                        <Button mnemonicParsing="false" text="Eliminar" />
+                        <Button mnemonicParsing="false" onAction="#editar3" text="Editar" />
+                        <Button mnemonicParsing="false" onAction="#eliminar3" text="Eliminar" />
+                     </children>
+                  </HBox>
+                  <ComboBox fx:id="cbDia4" prefWidth="150.0" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="cbMes4" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="cbHrI4" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="cbHrF4" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="cbModalidad4" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <children>
+                        <Button fx:id="btnEditar4" mnemonicParsing="false" onAction="#editar4" text="Editar" />
+                        <Button fx:id="btnEliminar4" mnemonicParsing="false" onAction="#eliminar4" text="Eliminar" />
                      </children>
                   </HBox>
                </children>

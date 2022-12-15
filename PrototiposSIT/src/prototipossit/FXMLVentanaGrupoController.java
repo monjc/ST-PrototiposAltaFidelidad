@@ -21,6 +21,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
 import javafx.stage.Stage;
 
 /**
@@ -234,6 +235,11 @@ public class FXMLVentanaGrupoController implements Initializable {
             cbGrupoHrI2.promptTextProperty().setValue(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
             cbGrupoHrF2.promptTextProperty().setValue(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
             cbGrupoModalidad2.promptTextProperty().setValue(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+            cbGrupoDia2.setStyle("-fx-background-color: #FA2D23");
+            cbGrupoMes2.setStyle("-fx-background-color: #FA2D23");
+            cbGrupoHrI2.setStyle("-fx-background-color: #FA2D23");
+            cbGrupoHrF2.setStyle("-fx-background-color: #FA2D23");
+            cbGrupoModalidad2.setStyle("-fx-background-color: #FA2D23");
 
             cbGrupoDia2.setDisable(true);
             cbGrupoMes2.setDisable(true);
@@ -247,6 +253,12 @@ public class FXMLVentanaGrupoController implements Initializable {
                 cbHrI1.valueProperty().set(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
                 cbHrF1.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
                 cbModalidad1.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+                cbDia1.setStyle("-fx-background-color: #FA2D23");
+                cbMes1.setStyle("-fx-background-color: #FA2D23");
+                cbHrI1.setStyle("-fx-background-color: #FA2D23");
+                cbHrF1.setStyle("-fx-background-color: #FA2D23");
+                cbModalidad1.setStyle("-fx-background-color: #FA2D23");
 
                 cbDia1.setDisable(true);
                 cbMes1.setDisable(true);
@@ -264,6 +276,12 @@ public class FXMLVentanaGrupoController implements Initializable {
                 cbHrF2.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
                 cbModalidad2.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
 
+                cbDia2.setStyle("-fx-background-color: #FA2D23");
+                cbMes2.setStyle("-fx-background-color: #FA2D23");
+                cbHrI2.setStyle("-fx-background-color: #FA2D23");
+                cbHrF2.setStyle("-fx-background-color: #FA2D23");
+                cbModalidad2.setStyle("-fx-background-color: #FA2D23");
+
                 cbDia2.setDisable(true);
                 cbMes2.setDisable(true);
                 cbHrI2.setDisable(true);
@@ -280,6 +298,12 @@ public class FXMLVentanaGrupoController implements Initializable {
                 cbHrF3.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
                 cbModalidad3.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
 
+                cbDia3.setStyle("-fx-background-color: #FA2D23");
+                cbMes3.setStyle("-fx-background-color: #FA2D23");
+                cbHrI3.setStyle("-fx-background-color: #FA2D23");
+                cbHrF3.setStyle("-fx-background-color: #FA2D23");
+                cbModalidad3.setStyle("-fx-background-color: #FA2D23");
+
                 cbDia3.setDisable(true);
                 cbMes3.setDisable(true);
                 cbHrI3.setDisable(true);
@@ -295,6 +319,12 @@ public class FXMLVentanaGrupoController implements Initializable {
                 cbHrI4.valueProperty().set(cbAñadirHrI.getSelectionModel().getSelectedItem().toString());
                 cbHrF4.valueProperty().set(cbAñadirHrFin.getSelectionModel().getSelectedItem().toString());
                 cbModalidad4.valueProperty().set(cbAñadirModalidad.getSelectionModel().getSelectedItem().toString());
+
+                cbDia4.setStyle("-fx-background-color: #FA2D23");
+                cbMes4.setStyle("-fx-background-color: #FA2D23");
+                cbHrI4.setStyle("-fx-background-color: #FA2D23");
+                cbHrF4.setStyle("-fx-background-color: #FA2D23");
+                cbModalidad4.setStyle("-fx-background-color: #FA2D23");
 
                 cbDia4.setDisable(true);
                 cbMes4.setDisable(true);
@@ -394,18 +424,24 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbAñadirModalidad.setItems(modalidad);
 
     }
-    
+
     @FXML
     void editar1(ActionEvent event) {
-        
+
         cbDia1.setDisable(false);
         cbMes1.setDisable(false);
         cbHrI1.setDisable(false);
         cbHrF1.setDisable(false);
         cbModalidad1.setDisable(false);
 
+        cbDia1.setStyle("-fx-background-color: ");
+        cbMes1.setStyle("-fx-background-color: ");
+        cbHrI1.setStyle("-fx-background-color: ");
+        cbHrF1.setStyle("-fx-background-color: ");
+        cbModalidad1.setStyle("-fx-background-color: ");
+
     }
-    
+
     @FXML
     void eliminar1(ActionEvent event) {
         cbDia1.setValue("");
@@ -413,7 +449,7 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI1.setValue("");
         cbHrF1.setValue("");
         cbModalidad1.setValue("");
-        
+
         cbDia1.setDisable(false);
         cbMes1.setDisable(false);
         cbHrI1.setDisable(false);
@@ -428,7 +464,12 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI2.setDisable(false);
         cbHrF2.setDisable(false);
         cbModalidad2.setDisable(false);
-
+        
+        cbDia2.setStyle("-fx-background-color: ");
+        cbMes2.setStyle("-fx-background-color: ");
+        cbHrI2.setStyle("-fx-background-color: ");
+        cbHrF2.setStyle("-fx-background-color: ");
+        cbModalidad2.setStyle("-fx-background-color: ");
     }
 
     @FXML
@@ -438,7 +479,7 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI2.setValue("");
         cbHrF2.setValue("");
         cbModalidad2.setValue("");
-        
+
         cbDia2.setDisable(false);
         cbMes2.setDisable(false);
         cbHrI2.setDisable(false);
@@ -453,6 +494,12 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI3.setDisable(false);
         cbHrF3.setDisable(false);
         cbModalidad3.setDisable(false);
+        
+        cbDia3.setStyle("-fx-background-color: ");
+        cbMes3.setStyle("-fx-background-color: ");
+        cbHrI3.setStyle("-fx-background-color: ");
+        cbHrF3.setStyle("-fx-background-color: ");
+        cbModalidad3.setStyle("-fx-background-color: ");
 
     }
 
@@ -463,7 +510,7 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI3.setValue("");
         cbHrF3.setValue("");
         cbModalidad3.setValue("");
-        
+
         cbDia3.setDisable(false);
         cbMes3.setDisable(false);
         cbHrI3.setDisable(false);
@@ -478,6 +525,12 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI4.setDisable(false);
         cbHrF4.setDisable(false);
         cbModalidad4.setDisable(false);
+        
+        cbDia4.setStyle("-fx-background-color: ");
+        cbMes4.setStyle("-fx-background-color: ");
+        cbHrI4.setStyle("-fx-background-color: ");
+        cbHrF4.setStyle("-fx-background-color: ");
+        cbModalidad4.setStyle("-fx-background-color: ");
     }
 
     @FXML
@@ -487,7 +540,7 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbHrI4.setValue("");
         cbHrF4.setValue("");
         cbModalidad4.setValue("");
-        
+
         cbDia4.setDisable(false);
         cbMes4.setDisable(false);
         cbHrI4.setDisable(false);
@@ -512,7 +565,7 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbGrupoHrI1.setValue("");
         cbGrupoHrF1.setValue("");
         cbGrupoModalidad1.setValue("");
-        
+
         cbGrupoDia1.setDisable(false);
         cbGrupoMes1.setDisable(false);
         cbGrupoHrI1.setDisable(false);
@@ -536,12 +589,50 @@ public class FXMLVentanaGrupoController implements Initializable {
         cbGrupoHrI2.setValue("");
         cbGrupoHrF2.setValue("");
         cbGrupoModalidad2.setValue("");
-        
+
         cbGrupoDia2.setDisable(false);
         cbGrupoMes2.setDisable(false);
         cbGrupoHrI2.setDisable(false);
         cbGrupoHrF2.setDisable(false);
         cbGrupoModalidad2.setDisable(false);
+    }
+    
+    @FXML
+    void guardar1(ActionEvent event){
+        
+        cbDia1.setDisable(true);
+        cbMes1.setDisable(true);
+        cbHrI1.setDisable(true);
+        cbHrF1.setDisable(true);
+        cbModalidad1.setDisable(true);
+        
+    }
+    
+    @FXML
+    void guardar2(ActionEvent event){
+        cbDia2.setDisable(true);
+        cbMes2.setDisable(true);
+        cbHrI2.setDisable(true);
+        cbHrF2.setDisable(true);
+        cbModalidad2.setDisable(true);
+    }
+    
+    @FXML
+    void guardar3(ActionEvent event){
+        cbDia3.setDisable(true);
+        cbMes3.setDisable(true);
+        cbHrI3.setDisable(true);
+        cbHrF3.setDisable(true);
+        cbModalidad3.setDisable(true);
+    }
+    
+    @FXML
+    void guardar4(ActionEvent event){
+        cbDia4.setDisable(true);
+        cbMes4.setDisable(true);
+        cbHrI4.setDisable(true);
+        cbHrF4.setDisable(true);
+        cbModalidad4.setDisable(true);
     }
 
 }
