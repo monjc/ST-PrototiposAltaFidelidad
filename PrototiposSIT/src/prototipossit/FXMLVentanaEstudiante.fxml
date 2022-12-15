@@ -41,7 +41,7 @@
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <VBox layoutX="111.0" layoutY="288.0" prefHeight="226.0" prefWidth="786.0">
+      <VBox layoutX="108.0" layoutY="292.0" prefHeight="226.0" prefWidth="879.0">
          <children>
             <Label prefHeight="17.0" prefWidth="416.0" text="Programar Horario por Estudiante">
                <font>
@@ -66,26 +66,9 @@
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <ComboBox prefWidth="150.0" promptText="Tecnologías Computacionales" />
+                  <ComboBox prefHeight="25.0" prefWidth="213.0" promptText="Tecnologías Computacionales" />
                </children>
             </HBox>
-            <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizar" text="Actualizar" />
-            <TableView fx:id="tEstudiantes" prefHeight="99.0" prefWidth="786.0">
-              <columns>
-                <TableColumn fx:id="cMatricula" prefWidth="75.0" text="Matricula" />
-                <TableColumn fx:id="cNombre" prefWidth="75.0" text="Nombre" />
-                  <TableColumn fx:id="cDia" prefWidth="75.0" text="Dia" />
-                  <TableColumn fx:id="cMes" prefWidth="75.0" text="Mes" />
-                  <TableColumn fx:id="cHrInicio" prefWidth="75.0" text="Hora Inicio" />
-                  <TableColumn fx:id="cHrFin" prefWidth="75.0" text="Hora Fin" />
-                  <TableColumn fx:id="cModalidad" prefWidth="75.0" text="Modalidad" />
-                  <TableColumn fx:id="cEditar" prefWidth="75.0" text="Editar" />
-                  <TableColumn fx:id="cEliminar" prefWidth="75.0" text="Eliminar" />
-              </columns>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-            </TableView>
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -112,14 +95,47 @@
                   <Label text="Hora Fin" GridPane.columnIndex="5" />
                   <Label text="Modalidad" GridPane.columnIndex="6" />
                   <Label text="Acciones" GridPane.columnIndex="7" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="btnEditar1" mnemonicParsing="false" onAction="#edicion1" text="Editar" />
+                        <Button fx:id="btnEliminar1" mnemonicParsing="false" onAction="#eliminar1" text="Eliminar" />
+                     </children></HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <children>
+                        <Button fx:id="btnEditar2" mnemonicParsing="false" onAction="#edicion2" text="Editar" />
+                        <Button fx:id="btnEliminar2" mnemonicParsing="false" onAction="#eliminar2" text="Eliminar" />
+                     </children></HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="btnEditar3" mnemonicParsing="false" onAction="#edicion3" text="Editar" />
+                        <Button fx:id="btnEliminar3" mnemonicParsing="false" onAction="#eliminar3" text="Eliminar" />
+                     </children></HBox>
+                  <Label fx:id="matricula1" text="S19123456" GridPane.rowIndex="1" />
+                  <Label fx:id="nombre1" text="Juan Pérez" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="matricula2" text="S20789101" GridPane.rowIndex="2" />
+                  <Label fx:id="nombre2" text="María López" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="matricula3" text="S19543210" GridPane.rowIndex="3" />
+                  <Label fx:id="nombre3" text="Pedro Gómez" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbDia1" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbDia2" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbDia3" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbMes1" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbMes2" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbMes3" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbHrI1" prefWidth="150.0" promptText="10:00" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbHrI2" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbHrI3" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbHrF1" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbHrF2" prefWidth="150.0" promptText="11:00" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbHrF3" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbModalidad1" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cbModalidad2" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbModalidad3" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
                </children>
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="btnGuardar" layoutX="790.0" layoutY="525.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
+      <Button fx:id="btnGuardar" layoutX="790.0" layoutY="531.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
