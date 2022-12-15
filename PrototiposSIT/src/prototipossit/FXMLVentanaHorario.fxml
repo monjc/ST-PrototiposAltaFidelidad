@@ -8,39 +8,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaHorarioController">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaHorarioController">
    <children>
-      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="124.0">
+      <TextField fx:id="tfDocente" editable="false" layoutX="732.0" layoutY="257.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label alignment="CENTER" layoutX="274.0" layoutY="75.0" text="Tutoría Académica - Agenda de tutorías por Horario">
+      <Label alignment="CENTER" layoutX="571.0" layoutY="208.0" text="Tutoría Académica - Agenda de tutorías por Horario">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="361.0" layoutY="23.0" text="Sistema Institucional de Tutorías">
+      <Label layoutX="658.0" layoutY="156.0" text="Sistema Institucional de Tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="349.0" layoutY="128.0" text="Docente:">
+      <Label layoutX="646.0" layoutY="261.0" text="Docente:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="800.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1097.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Letras.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="303.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <VBox layoutX="126.0" layoutY="219.0" prefHeight="236.0" prefWidth="756.0">
+      <VBox layoutX="281.0" layoutY="375.0" prefHeight="236.0" prefWidth="1039.0">
          <children>
             <Label text="Programar Horario Abierto">
                <font>
@@ -140,19 +140,19 @@
                      <children>
                         <Button fx:id="btnEditar4" mnemonicParsing="false" onAction="#editar4" text="Editar" />
                         <Button fx:id="btnEliminar4" mnemonicParsing="false" onAction="#eliminar4" text="Eliminar" />
-                        <Button mnemonicParsing="false" onAction="#guardar4" text="Guardar" />
+                        <Button fx:id="btnGuardar4" mnemonicParsing="false" onAction="#guardar4" text="Guardar" />
                      </children>
                   </HBox>
                </children>
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="btnRegresar" layoutX="184.0" layoutY="570.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
+      <Button fx:id="btnRegresar" layoutX="423.0" layoutY="842.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnAgregarHorario" layoutX="651.0" layoutY="570.0" mnemonicParsing="false" onAction="#agregarHorario" style="-fx-background-color: #4caf50;" text="Agregar Horario" textFill="WHITE">
+      <Button fx:id="btnAgregarHorario" layoutX="1007.0" layoutY="842.0" mnemonicParsing="false" onAction="#agregarHorario" style="-fx-background-color: #4caf50;" text="Agregar Horario" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

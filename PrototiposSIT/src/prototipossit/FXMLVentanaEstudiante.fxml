@@ -9,39 +9,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaEstudianteController">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipossit.FXMLVentanaEstudianteController">
    <children>
-      <Label layoutX="361.0" layoutY="24.0" text="Sistema Institucional de Tutorías">
+      <Label layoutX="587.0" layoutY="235.0" text="Sistema Institucional de Tutorías">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="261.0" layoutY="73.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
+      <Label alignment="CENTER" layoutX="487.0" layoutY="284.0" text="Tutoría Académica - Agenda de tutorías por Estudiante">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="349.0" layoutY="128.0" text="Docente:">
+      <Label layoutX="575.0" layoutY="339.0" text="Docente:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tfDocente" editable="false" layoutX="435.0" layoutY="124.0">
+      <TextField fx:id="tfDocente" editable="false" layoutX="661.0" layoutY="335.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="807.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1033.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Letras.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="232.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo1_Uv.png" />
          </image>
       </ImageView>
-      <VBox layoutX="64.0" layoutY="220.0" prefHeight="226.0" prefWidth="879.0">
+      <VBox layoutX="93.0" layoutY="450.0" prefHeight="226.0" prefWidth="1273.0">
          <children>
             <Label prefHeight="17.0" prefWidth="416.0" text="Programar Horario por Estudiante">
                <font>
@@ -135,12 +135,12 @@
             </GridPane>
          </children>
       </VBox>
-      <Button fx:id="btnGuardar" layoutX="790.0" layoutY="531.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
+      <Button fx:id="btnGuardar" layoutX="1033.0" layoutY="786.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegresar" layoutX="145.0" layoutY="525.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
+      <Button fx:id="btnRegresar" layoutX="348.0" layoutY="786.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
