@@ -280,7 +280,7 @@ public class FXMLVentanaHorarioController implements Initializable {
     }
 
     private void llenarCombosModalidad() {
-        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "Virtual"));
+        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "Virtual", "Por elegir"));
         cbModalidad1.setItems(modalidad);
         cbModalidad2.setItems(modalidad);
         cbModalidad3.setItems(modalidad);
