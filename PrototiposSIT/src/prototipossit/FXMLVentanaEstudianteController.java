@@ -127,13 +127,40 @@ public class FXMLVentanaEstudianteController implements Initializable {
     @FXML
     private Button btnEliminar1;
 
+    @FXML
+    private ComboBox cbLugar1;
+
+    @FXML
+    private ComboBox cbLugar2;
+
+    @FXML
+    private ComboBox cbLugar3;
+
+    @FXML
+    private ComboBox cbLugar4;
+
+    @FXML
+    private ComboBox cbSesion;
+
+    @FXML
+    private ComboBox cbPeriodo;
+
+    @FXML
+    private ComboBox cbProgramaEducativo;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        tfDocente.setText("Docente de Ejemplo");
+        tfDocente.setText("Tutor de Ejemplo");
+
+        llenarComboPeriodo();
+        llenarComboSesion();
+        llenarComboProgramaEducativo();
+
         llenarCombosDias();
         llenarCombosMeses();
         llenarCombosHorasInicio();
         llenarCombosHorasFin();
+        llenarCombosLugar();
         llenarCombosModalidad();
     }
 
@@ -178,6 +205,7 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbMes1.setDisable(false);
         cbHrI1.setDisable(false);
         cbHrF1.setDisable(false);
+        cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
     }
 
@@ -187,12 +215,14 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbMes1.setDisable(false);
         cbHrI1.setDisable(false);
         cbHrF1.setDisable(false);
+        cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
-        
+
         cbDia1.setValue("");
         cbMes1.setValue("");
         cbHrI1.setValue("");
         cbHrF1.setValue("");
+        cbLugar1.setValue("");
         cbModalidad1.setValue("");
     }
 
@@ -202,22 +232,25 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbMes2.setDisable(false);
         cbHrI2.setDisable(false);
         cbHrF2.setDisable(false);
+        cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
     }
 
     @FXML
     void eliminar2(ActionEvent event) {
-        
+
         cbDia2.setDisable(false);
         cbMes2.setDisable(false);
         cbHrI2.setDisable(false);
         cbHrF2.setDisable(false);
+        cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
-        
+
         cbDia2.setValue("");
         cbMes2.setValue("");
         cbHrI2.setValue("");
         cbHrF2.setValue("");
+        cbLugar2.setValue("");
         cbModalidad2.setValue("");
     }
 
@@ -227,22 +260,25 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbMes3.setDisable(false);
         cbHrI3.setDisable(false);
         cbHrF3.setDisable(false);
+        cbLugar3.setDisable(false);
         cbModalidad3.setDisable(false);
     }
 
     @FXML
     void eliminar3(ActionEvent event) {
-        
+
         cbDia3.setDisable(false);
         cbMes3.setDisable(false);
         cbHrI3.setDisable(false);
         cbHrF3.setDisable(false);
+        cbLugar3.setDisable(false);
         cbModalidad3.setDisable(false);
-        
+
         cbDia3.setValue("");
         cbMes3.setValue("");
         cbHrI3.setValue("");
         cbHrF3.setValue("");
+        cbLugar3.setValue("");
         cbModalidad3.setValue("");
     }
 
@@ -263,6 +299,10 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF1.setDisable(true);
         cbHrF2.setDisable(true);
         cbHrF3.setDisable(true);
+        
+        cbLugar1.setDisable(true);
+        cbLugar2.setDisable(true);
+        cbLugar3.setDisable(true);
 
         cbModalidad1.setDisable(true);
         cbModalidad2.setDisable(true);
@@ -281,6 +321,28 @@ public class FXMLVentanaEstudianteController implements Initializable {
         Stage stageActual = (Stage) btnRegresar.getScene().getWindow();
         Stage stage = (Stage) stageActual.getScene().getWindow();
         stage.close();
+    }
+
+    private void llenarComboPeriodo() {
+        ObservableList<String> periodos = FXCollections.observableList(Arrays.asList("Agosto 2022 - Enero 2023", "Febrero 2022 - Julio 2022", "Agosto 2021 - Enero 2022"));
+        cbPeriodo.setItems(periodos);
+    }
+
+    private void llenarComboSesion() {
+        ObservableList<String> sesiones = FXCollections.observableList(Arrays.asList("1", "2", "3"));
+        cbSesion.setItems(sesiones);
+    }
+
+    private void llenarComboProgramaEducativo() {
+        ObservableList<String> programas = FXCollections.observableList(Arrays.asList("Tecnologías Computacionales", "Ingeniería de Software", "Redes y Servicios de Cómputo"));
+        cbProgramaEducativo.setItems(programas);
+    }
+
+    private void llenarCombosLugar() {
+        ObservableList<String> lugares = FXCollections.observableList(Arrays.asList("Aula TC","F101", "F102","F103","F401","F402","F403","Cubículo 1", "Cubículo 2"));
+        cbLugar1.setItems(lugares);
+        cbLugar2.setItems(lugares);
+        cbLugar3.setItems(lugares);
     }
 
 }

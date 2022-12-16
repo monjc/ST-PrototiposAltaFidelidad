@@ -36,7 +36,7 @@ public class FXMLVentanaInicioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        tfDocente.setText("Docente de Ejemplo");
+        tfDocente.setText("Tutor de Ejemplo");
         cbOpcionAgenda.setItems(FXCollections.observableArrayList("Por estudiante", "Por grupo", "Por horario"));
     }
 

@@ -21,7 +21,7 @@
             <Image url="@Letras.png" />
          </image>
       </ImageView>
-      <Label layoutX="349.0" layoutY="135.0" text="Docente:">
+      <Label layoutX="349.0" layoutY="135.0" text="Tutor">
          <font>
             <Font size="18.0" />
          </font>

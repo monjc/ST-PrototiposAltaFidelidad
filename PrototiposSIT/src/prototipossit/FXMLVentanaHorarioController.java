@@ -106,6 +106,27 @@ public class FXMLVentanaHorarioController implements Initializable {
     
     @FXML
     private Button btnGuardar4;
+    
+    @FXML
+    private ComboBox cbPeriodo;
+
+    @FXML
+    private ComboBox cbSesion;
+
+    @FXML
+    private ComboBox cbProgramaEducativo;
+    
+    @FXML
+    private ComboBox cbLugar1;
+    
+    @FXML
+    private ComboBox cbLugar2;
+    
+    @FXML
+    private ComboBox cbLugar3;
+    
+    @FXML
+    private ComboBox cbLugar4;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -113,15 +134,21 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes4.setVisible(false);
         cbHrI4.setVisible(false);
         cbHrF4.setVisible(false);
+        cbLugar4.setVisible(false);
         cbModalidad4.setVisible(false);
         btnEditar4.setVisible(false);
         btnEliminar4.setVisible(false);
         btnGuardar4.setVisible(false);
+        
+        llenarComboPeriodo();
+        llenarComboSesion();
+        llenarComboProgramaEducativo();
 
         llenarCombosDias();
         llenarCombosMeses();
         llenarCombosHorasInicio();
         llenarCombosHorasFin();
+        llenarCombosLugar();
         llenarCombosModalidad();
     }
 
@@ -131,6 +158,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes4.setVisible(true);
         cbHrI4.setVisible(true);
         cbHrF4.setVisible(true);
+        cbLugar4.setVisible(true);
         cbModalidad4.setVisible(true);
         btnEditar4.setVisible(true);
         btnEliminar4.setVisible(true);
@@ -144,6 +172,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes1.setDisable(false);
         cbHrI1.setDisable(false);
         cbHrF1.setDisable(false);
+        cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
     }
 
@@ -153,12 +182,14 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes1.setDisable(false);
         cbHrI1.setDisable(false);
         cbHrF1.setDisable(false);
+        cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
 
         cbDia1.setValue("");
         cbMes1.setValue("");
         cbHrI1.setValue("");
         cbHrF1.setValue("");
+        cbLugar1.setValue("");        
         cbModalidad1.setValue("");
     }
 
@@ -168,6 +199,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes2.setDisable(false);
         cbHrI2.setDisable(false);
         cbHrF2.setDisable(false);
+        cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
     }
 
@@ -177,12 +209,14 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes2.setValue("");
         cbHrI2.setValue("");
         cbHrF2.setValue("");
+        cbLugar2.setValue("");
         cbModalidad2.setValue("");
 
         cbDia2.setDisable(false);
         cbMes2.setDisable(false);
         cbHrI2.setDisable(false);
         cbHrF2.setDisable(false);
+        cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
     }
 
@@ -192,6 +226,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes3.setDisable(false);
         cbHrI3.setDisable(false);
         cbHrF3.setDisable(false);
+        cbLugar3.setDisable(false);
         cbModalidad3.setDisable(false);
     }
 
@@ -201,12 +236,14 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes3.setValue("");
         cbHrI3.setValue("");
         cbHrF3.setValue("");
+        cbLugar3.setValue("");
         cbModalidad3.setValue("");
 
         cbDia3.setDisable(false);
         cbMes3.setDisable(false);
         cbHrI3.setDisable(false);
         cbHrF3.setDisable(false);
+        cbLugar3.setDisable(false);        
         cbModalidad3.setDisable(false);
     }
 
@@ -216,6 +253,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes4.setDisable(false);
         cbHrI4.setDisable(false);
         cbHrF4.setDisable(false);
+        cbLugar4.setDisable(false);
         cbModalidad4.setDisable(false);
     }
 
@@ -225,12 +263,14 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes4.setValue("");
         cbHrI4.setValue("");
         cbHrF4.setValue("");
+        cbLugar4.setValue("");
         cbModalidad4.setValue("");
 
         cbDia4.setDisable(false);
         cbMes4.setDisable(false);
         cbHrI4.setDisable(false);
         cbHrF4.setDisable(false);
+        cbLugar4.setDisable(false);
         cbModalidad4.setDisable(false);
     }
 
@@ -287,6 +327,29 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbModalidad4.setItems(modalidad);
     }
     
+    private void llenarComboPeriodo() {
+        ObservableList<String> periodos = FXCollections.observableList(Arrays.asList("Agosto 2022 - Enero 2023", "Febrero 2022 - Julio 2022", "Agosto 2021 - Enero 2022"));
+        cbPeriodo.setItems(periodos);
+    }
+
+    private void llenarComboSesion() {
+        ObservableList<String> sesiones = FXCollections.observableList(Arrays.asList("1", "2", "3"));
+        cbSesion.setItems(sesiones);
+    }
+
+    private void llenarComboProgramaEducativo() {
+        ObservableList<String> programas = FXCollections.observableList(Arrays.asList("Tecnologías Computacionales", "Ingeniería de Software", "Redes y Servicios de Cómputo"));
+        cbProgramaEducativo.setItems(programas);
+    }
+
+    private void llenarCombosLugar() {
+        ObservableList<String> lugares = FXCollections.observableList(Arrays.asList("Aula TC","F101", "F102","F103","F401","F402","F403","Cubículo 1", "Cubículo 2"));
+        cbLugar1.setItems(lugares);
+        cbLugar2.setItems(lugares);
+        cbLugar3.setItems(lugares);
+        cbLugar4.setItems(lugares);
+    }
+    
     @FXML
     void guardar1(ActionEvent event){
         
@@ -294,6 +357,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes1.setDisable(true);
         cbHrI1.setDisable(true);
         cbHrF1.setDisable(true);
+        cbLugar1.setDisable(true);
         cbModalidad1.setDisable(true);
         
     }
@@ -304,6 +368,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes2.setDisable(true);
         cbHrI2.setDisable(true);
         cbHrF2.setDisable(true);
+        cbLugar2.setDisable(true);
         cbModalidad2.setDisable(true);
     }
     
@@ -313,6 +378,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes3.setDisable(true);
         cbHrI3.setDisable(true);
         cbHrF3.setDisable(true);
+        cbLugar3.setDisable(true);
         cbModalidad3.setDisable(true);
     }
     
@@ -322,6 +388,7 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbMes4.setDisable(true);
         cbHrI4.setDisable(true);
         cbHrF4.setDisable(true);
+        cbLugar4.setDisable(true);
         cbModalidad4.setDisable(true);
     }
 }
