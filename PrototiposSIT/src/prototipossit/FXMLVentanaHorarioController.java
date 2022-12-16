@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -103,10 +106,10 @@ public class FXMLVentanaHorarioController implements Initializable {
 
     @FXML
     private Button btnEliminar4;
-    
+
     @FXML
     private Button btnGuardar4;
-    
+
     @FXML
     private ComboBox cbPeriodo;
 
@@ -115,18 +118,42 @@ public class FXMLVentanaHorarioController implements Initializable {
 
     @FXML
     private ComboBox cbProgramaEducativo;
-    
+
     @FXML
     private ComboBox cbLugar1;
-    
+
     @FXML
     private ComboBox cbLugar2;
-    
+
     @FXML
     private ComboBox cbLugar3;
-    
+
     @FXML
     private ComboBox cbLugar4;
+
+    @FXML
+    private TextField tfVinculo1;
+
+    @FXML
+    private TextField tfVinculo2;
+
+    @FXML
+    private TextField tfVinculo3;
+    
+    @FXML
+    private TextField tfVinculo4;
+
+    @FXML
+    private Label lbVinculo1;
+
+    @FXML
+    private Label lbVinculo2;
+
+    @FXML
+    private Label lbVinculo3;
+    
+    @FXML
+    private Label lbVinculo4;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -140,6 +167,70 @@ public class FXMLVentanaHorarioController implements Initializable {
         btnEliminar4.setVisible(false);
         btnGuardar4.setVisible(false);
         
+        tfVinculo2.setVisible(false);
+        tfVinculo3.setVisible(false);
+        tfVinculo4.setVisible(false);
+        
+        lbVinculo2.setVisible(false);
+        lbVinculo3.setVisible(false);
+        lbVinculo4.setVisible(false);
+        
+        cbModalidad1.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo1.setText("");
+                    tfVinculo1.setVisible(true);
+                    lbVinculo1.setVisible(true);
+                }else{
+                    tfVinculo1.setVisible(false);
+                    lbVinculo1.setVisible(false);
+                }
+            }
+        });
+        
+        cbModalidad2.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo2.setText("");
+                    tfVinculo2.setVisible(true);
+                    lbVinculo2.setVisible(true);
+                }else{
+                    tfVinculo2.setVisible(false);
+                    lbVinculo2.setVisible(false);
+                }
+            }
+        });
+        
+        cbModalidad3.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo3.setText("");
+                    tfVinculo3.setVisible(true);
+                    lbVinculo3.setVisible(true);
+                }else{
+                    tfVinculo3.setVisible(false);
+                    lbVinculo3.setVisible(false);
+                }
+            }
+        });
+        
+        cbModalidad4.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo4.setText("");
+                    tfVinculo4.setVisible(true);
+                    lbVinculo4.setVisible(true);
+                }else{
+                    tfVinculo4.setVisible(false);
+                    lbVinculo4.setVisible(false);
+                }
+            }
+        });
+
         llenarComboPeriodo();
         llenarComboSesion();
         llenarComboProgramaEducativo();
@@ -174,6 +265,9 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF1.setDisable(false);
         cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
+        
+        tfVinculo1.setDisable(false);
+        lbVinculo1.setDisable(false);
     }
 
     @FXML
@@ -184,13 +278,18 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF1.setDisable(false);
         cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
+        
+        tfVinculo1.setDisable(false);
+        lbVinculo1.setDisable(false);
 
         cbDia1.setValue("");
         cbMes1.setValue("");
         cbHrI1.setValue("");
         cbHrF1.setValue("");
-        cbLugar1.setValue("");        
+        cbLugar1.setValue("");
         cbModalidad1.setValue("");
+        
+        tfVinculo1.setText("");
     }
 
     @FXML
@@ -201,23 +300,32 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF2.setDisable(false);
         cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
+        
+        tfVinculo2.setDisable(false);
+        lbVinculo2.setDisable(false);
     }
 
     @FXML
     void eliminar2(ActionEvent event) {
-        cbDia2.setValue("");
-        cbMes2.setValue("");
-        cbHrI2.setValue("");
-        cbHrF2.setValue("");
-        cbLugar2.setValue("");
-        cbModalidad2.setValue("");
-
+        
         cbDia2.setDisable(false);
         cbMes2.setDisable(false);
         cbHrI2.setDisable(false);
         cbHrF2.setDisable(false);
         cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
+        
+        tfVinculo2.setDisable(false);
+        lbVinculo2.setDisable(false);
+        
+        cbDia2.setValue("");
+        cbMes2.setValue("");
+        cbHrI2.setValue("");
+        cbHrF2.setValue("");
+        cbLugar2.setValue("");
+        cbModalidad2.setValue("");
+        
+        tfVinculo2.setText("");
     }
 
     @FXML
@@ -228,23 +336,32 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF3.setDisable(false);
         cbLugar3.setDisable(false);
         cbModalidad3.setDisable(false);
+        
+        tfVinculo3.setDisable(false);
+        lbVinculo3.setDisable(false);
     }
 
     @FXML
     void eliminar3(ActionEvent event) {
+
+        cbDia3.setDisable(false);
+        cbMes3.setDisable(false);
+        cbHrI3.setDisable(false);
+        cbHrF3.setDisable(false);
+        cbLugar3.setDisable(false);
+        cbModalidad3.setDisable(false);
+        
+        tfVinculo3.setDisable(false);
+        lbVinculo3.setDisable(false);
+        
         cbDia3.setValue("");
         cbMes3.setValue("");
         cbHrI3.setValue("");
         cbHrF3.setValue("");
         cbLugar3.setValue("");
         cbModalidad3.setValue("");
-
-        cbDia3.setDisable(false);
-        cbMes3.setDisable(false);
-        cbHrI3.setDisable(false);
-        cbHrF3.setDisable(false);
-        cbLugar3.setDisable(false);        
-        cbModalidad3.setDisable(false);
+        
+        tfVinculo3.setText("");
     }
 
     @FXML
@@ -255,6 +372,9 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF4.setDisable(false);
         cbLugar4.setDisable(false);
         cbModalidad4.setDisable(false);
+        
+        tfVinculo4.setDisable(false);
+        lbVinculo4.setDisable(false);
     }
 
     @FXML
@@ -265,6 +385,8 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF4.setValue("");
         cbLugar4.setValue("");
         cbModalidad4.setValue("");
+        
+        tfVinculo4.setText("");
 
         cbDia4.setDisable(false);
         cbMes4.setDisable(false);
@@ -272,6 +394,9 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbHrF4.setDisable(false);
         cbLugar4.setDisable(false);
         cbModalidad4.setDisable(false);
+        
+        tfVinculo4.setDisable(false);
+        lbVinculo4.setDisable(false);
     }
 
     @FXML
@@ -320,13 +445,13 @@ public class FXMLVentanaHorarioController implements Initializable {
     }
 
     private void llenarCombosModalidad() {
-        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "Virtual", "Por elegir"));
+        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "En línea"));
         cbModalidad1.setItems(modalidad);
         cbModalidad2.setItems(modalidad);
         cbModalidad3.setItems(modalidad);
         cbModalidad4.setItems(modalidad);
     }
-    
+
     private void llenarComboPeriodo() {
         ObservableList<String> periodos = FXCollections.observableList(Arrays.asList("Agosto 2022 - Enero 2023", "Febrero 2022 - Julio 2022", "Agosto 2021 - Enero 2022"));
         cbPeriodo.setItems(periodos);
@@ -343,16 +468,16 @@ public class FXMLVentanaHorarioController implements Initializable {
     }
 
     private void llenarCombosLugar() {
-        ObservableList<String> lugares = FXCollections.observableList(Arrays.asList("Aula TC","F101", "F102","F103","F401","F402","F403","Cubículo 1", "Cubículo 2"));
+        ObservableList<String> lugares = FXCollections.observableList(Arrays.asList("Aula TC", "F101", "F102", "F103", "F401", "F402", "F403", "Cubículo 1", "Cubículo 2"));
         cbLugar1.setItems(lugares);
         cbLugar2.setItems(lugares);
         cbLugar3.setItems(lugares);
         cbLugar4.setItems(lugares);
     }
-    
+
     @FXML
-    void guardar1(ActionEvent event){
-        
+    void guardar1(ActionEvent event) {
+
         cbDia1.setDisable(true);
         cbMes1.setDisable(true);
         cbHrI1.setDisable(true);
@@ -360,35 +485,47 @@ public class FXMLVentanaHorarioController implements Initializable {
         cbLugar1.setDisable(true);
         cbModalidad1.setDisable(true);
         
+        tfVinculo1.setDisable(true);
+        lbVinculo1.setDisable(true);
+
     }
-    
+
     @FXML
-    void guardar2(ActionEvent event){
+    void guardar2(ActionEvent event) {
         cbDia2.setDisable(true);
         cbMes2.setDisable(true);
         cbHrI2.setDisable(true);
         cbHrF2.setDisable(true);
         cbLugar2.setDisable(true);
         cbModalidad2.setDisable(true);
+        
+        tfVinculo2.setDisable(true);
+        lbVinculo2.setDisable(true);
     }
-    
+
     @FXML
-    void guardar3(ActionEvent event){
+    void guardar3(ActionEvent event) {
         cbDia3.setDisable(true);
         cbMes3.setDisable(true);
         cbHrI3.setDisable(true);
         cbHrF3.setDisable(true);
         cbLugar3.setDisable(true);
         cbModalidad3.setDisable(true);
+        
+        tfVinculo3.setDisable(true);
+        lbVinculo3.setDisable(true);
     }
-    
+
     @FXML
-    void guardar4(ActionEvent event){
+    void guardar4(ActionEvent event) {
         cbDia4.setDisable(true);
         cbMes4.setDisable(true);
         cbHrI4.setDisable(true);
         cbHrF4.setDisable(true);
         cbLugar4.setDisable(true);
         cbModalidad4.setDisable(true);
+        
+        tfVinculo4.setDisable(true);
+        lbVinculo4.setDisable(true);
     }
 }

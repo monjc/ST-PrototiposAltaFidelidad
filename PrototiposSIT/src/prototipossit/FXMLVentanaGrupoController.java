@@ -462,7 +462,7 @@ public class FXMLVentanaGrupoController implements Initializable {
     }
 
     public void llenarCombosModalidad() {
-        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "Virtual"));
+        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "En línea"));
         cbModalidad1.setItems(modalidad);
         cbModalidad2.setItems(modalidad);
         cbModalidad3.setItems(modalidad);

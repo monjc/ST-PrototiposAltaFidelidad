@@ -83,13 +83,13 @@ public class FXMLVentanaEstudianteController implements Initializable {
     private ComboBox cbMes2;
 
     @FXML
-    private ComboBox cbModalidad2;
+    private ComboBox<String> cbModalidad2;
 
     @FXML
     private ComboBox cbModalidad3;
 
     @FXML
-    private ComboBox cbModalidad1;
+    private ComboBox<String> cbModalidad1;
 
     @FXML
     private Button btnRegresar;
@@ -137,9 +137,6 @@ public class FXMLVentanaEstudianteController implements Initializable {
     private ComboBox cbLugar3;
 
     @FXML
-    private ComboBox cbLugar4;
-
-    @FXML
     private ComboBox cbSesion;
 
     @FXML
@@ -148,9 +145,73 @@ public class FXMLVentanaEstudianteController implements Initializable {
     @FXML
     private ComboBox cbProgramaEducativo;
 
+    @FXML
+    private TextField tfVinculo1;
+
+    @FXML
+    private TextField tfVinculo2;
+
+    @FXML
+    private TextField tfVinculo3;
+
+    @FXML
+    private Label lbVinculo1;
+
+    @FXML
+    private Label lbVinculo2;
+
+    @FXML
+    private Label lbVinculo3;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tfDocente.setText("Tutor de Ejemplo");
+        tfVinculo2.setVisible(false);
+        tfVinculo3.setVisible(false);
+        lbVinculo2.setVisible(false);
+        lbVinculo3.setVisible(false);
+        
+        cbModalidad1.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo1.setText("");
+                    tfVinculo1.setVisible(true);
+                    lbVinculo1.setVisible(true);
+                }else{
+                    tfVinculo1.setVisible(false);
+                    lbVinculo1.setVisible(false);
+                }
+            }
+        });
+        
+        cbModalidad2.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo2.setText("");
+                    tfVinculo2.setVisible(true);
+                    lbVinculo2.setVisible(true);
+                }else{
+                    tfVinculo2.setVisible(false);
+                    lbVinculo2.setVisible(false);
+                }
+            }
+        });
+        
+        cbModalidad3.valueProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue <? extends String> arg0, String string_before, String string_after){
+                if (string_after.equals("En línea")){
+                    tfVinculo3.setText("");
+                    tfVinculo3.setVisible(true);
+                    lbVinculo3.setVisible(true);
+                }else{
+                    tfVinculo3.setVisible(false);
+                    lbVinculo3.setVisible(false);
+                }
+            }
+        });
 
         llenarComboPeriodo();
         llenarComboSesion();
@@ -193,7 +254,7 @@ public class FXMLVentanaEstudianteController implements Initializable {
     }
 
     public void llenarCombosModalidad() {
-        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "Virtual"));
+        ObservableList<String> modalidad = FXCollections.observableList(Arrays.asList("Presencial", "En línea"));
         cbModalidad1.setItems(modalidad);
         cbModalidad2.setItems(modalidad);
         cbModalidad3.setItems(modalidad);
@@ -207,6 +268,9 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF1.setDisable(false);
         cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
+        
+        tfVinculo1.setDisable(false);
+        lbVinculo1.setDisable(false);
     }
 
     @FXML
@@ -217,6 +281,9 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF1.setDisable(false);
         cbLugar1.setDisable(false);
         cbModalidad1.setDisable(false);
+        
+        tfVinculo1.setDisable(false);
+        lbVinculo1.setDisable(false);
 
         cbDia1.setValue("");
         cbMes1.setValue("");
@@ -224,6 +291,8 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF1.setValue("");
         cbLugar1.setValue("");
         cbModalidad1.setValue("");
+        
+        tfVinculo1.setText("");
     }
 
     @FXML
@@ -234,6 +303,8 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF2.setDisable(false);
         cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
+        tfVinculo2.setDisable(false);
+        lbVinculo2.setDisable(false);
     }
 
     @FXML
@@ -245,6 +316,9 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF2.setDisable(false);
         cbLugar2.setDisable(false);
         cbModalidad2.setDisable(false);
+        
+        tfVinculo2.setDisable(false);
+        lbVinculo2.setDisable(false);
 
         cbDia2.setValue("");
         cbMes2.setValue("");
@@ -252,6 +326,8 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF2.setValue("");
         cbLugar2.setValue("");
         cbModalidad2.setValue("");
+        
+        tfVinculo2.setText("");
     }
 
     @FXML
@@ -262,6 +338,9 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF3.setDisable(false);
         cbLugar3.setDisable(false);
         cbModalidad3.setDisable(false);
+        
+        tfVinculo3.setDisable(false);
+        lbVinculo3.setDisable(false);
     }
 
     @FXML
@@ -273,6 +352,9 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF3.setDisable(false);
         cbLugar3.setDisable(false);
         cbModalidad3.setDisable(false);
+        
+        tfVinculo3.setDisable(false);
+        lbVinculo3.setDisable(false);
 
         cbDia3.setValue("");
         cbMes3.setValue("");
@@ -280,10 +362,13 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF3.setValue("");
         cbLugar3.setValue("");
         cbModalidad3.setValue("");
+        
+        tfVinculo3.setText("");
     }
 
     @FXML
     void guardar(ActionEvent event) {
+
         cbDia1.setDisable(true);
         cbDia2.setDisable(true);
         cbDia3.setDisable(true);
@@ -299,7 +384,7 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbHrF1.setDisable(true);
         cbHrF2.setDisable(true);
         cbHrF3.setDisable(true);
-        
+
         cbLugar1.setDisable(true);
         cbLugar2.setDisable(true);
         cbLugar3.setDisable(true);
@@ -307,6 +392,14 @@ public class FXMLVentanaEstudianteController implements Initializable {
         cbModalidad1.setDisable(true);
         cbModalidad2.setDisable(true);
         cbModalidad3.setDisable(true);
+        
+        tfVinculo1.setDisable(true);
+        tfVinculo2.setDisable(true);
+        tfVinculo3.setDisable(true);
+        
+        lbVinculo1.setDisable(true);
+        lbVinculo2.setDisable(true);
+        lbVinculo3.setDisable(true);
 
     }
 
@@ -339,10 +432,9 @@ public class FXMLVentanaEstudianteController implements Initializable {
     }
 
     private void llenarCombosLugar() {
-        ObservableList<String> lugares = FXCollections.observableList(Arrays.asList("Aula TC","F101", "F102","F103","F401","F402","F403","Cubículo 1", "Cubículo 2"));
+        ObservableList<String> lugares = FXCollections.observableList(Arrays.asList("Aula TC", "F101", "F102", "F103", "F401", "F402", "F403", "Cubículo 1", "Cubículo 2"));
         cbLugar1.setItems(lugares);
         cbLugar2.setItems(lugares);
         cbLugar3.setItems(lugares);
     }
-
 }

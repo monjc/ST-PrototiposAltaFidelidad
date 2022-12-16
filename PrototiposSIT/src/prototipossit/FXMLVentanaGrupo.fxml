@@ -115,8 +115,8 @@
             <Label text="Mes" GridPane.columnIndex="5" />
             <Label text="Hora Inicio" GridPane.columnIndex="6" />
             <Label text="Hora Fin" GridPane.columnIndex="7" />
-            <Label text="Modalidad" GridPane.columnIndex="9" />
-            <Label text="Acciones" GridPane.columnIndex="10" />
+            <Label text="Ambiente de trabajo" GridPane.columnIndex="9" />
+            <Label text="   Acciones" GridPane.columnIndex="10" />
             <Label text="S18242526" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Óscar Martínez" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label text="S19112233" GridPane.columnIndex="1" GridPane.rowIndex="2" />

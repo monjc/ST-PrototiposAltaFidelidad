@@ -53,7 +53,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <ComboBox fx:id="cbPeriodo" prefWidth="215.0" promptText="Agosto 2022 - Enero2023">
+            <ComboBox fx:id="cbPeriodo" prefWidth="250.0" promptText="Agosto 2022 - Enero2023">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
@@ -79,14 +79,14 @@
                   <Insets left="140.0" />
                </HBox.margin>
             </Label>
-            <ComboBox fx:id="cbProgramaEducativo" prefHeight="25.0" prefWidth="213.0" promptText="Tecnologías Computacionales">
+            <ComboBox fx:id="cbProgramaEducativo" prefHeight="25.0" prefWidth="250.0" promptText="Tecnologías Computacionales">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </ComboBox>
          </children>
       </HBox>
-      <GridPane alignment="CENTER" layoutX="280.0" layoutY="480.0" prefHeight="190.0" prefWidth="1132.0" vgap="10.0" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="234.0" AnchorPane.topAnchor="480.0">
+      <GridPane alignment="CENTER" layoutX="280.0" layoutY="480.0" prefHeight="283.0" prefWidth="1300.0" vgap="10.0" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="480.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -101,7 +101,10 @@
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -111,7 +114,7 @@
             <Label text="Mes" GridPane.columnIndex="3" />
             <Label text="Hora Inicio" GridPane.columnIndex="4" />
             <Label text="Hora Fin" GridPane.columnIndex="5" />
-            <Label text="Modalidad" GridPane.columnIndex="7" />
+            <Label text="Ambiente de trabajo" GridPane.columnIndex="7" />
             <Label text="Acciones" GridPane.columnIndex="8" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
                <children>
@@ -119,13 +122,13 @@
                   <Button fx:id="btnEliminar1" mnemonicParsing="false" onAction="#eliminar1" text="Eliminar" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
                <children>
                   <Button fx:id="btnEditar2" mnemonicParsing="false" onAction="#edicion2" text="Editar" />
                   <Button fx:id="btnEliminar2" mnemonicParsing="false" onAction="#eliminar2" text="Eliminar" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="8" GridPane.rowIndex="5">
                <children>
                   <Button fx:id="btnEditar3" mnemonicParsing="false" onAction="#edicion3" text="Editar" />
                   <Button fx:id="btnEliminar3" mnemonicParsing="false" onAction="#eliminar3" text="Eliminar" />
@@ -133,37 +136,47 @@
             </HBox>
             <Label fx:id="matricula1" text="S19123456" GridPane.rowIndex="1" />
             <Label fx:id="nombre1" text="Juan Pérez" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="matricula2" text="S20789101" GridPane.rowIndex="2" />
-            <Label fx:id="nombre2" text="María López" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label fx:id="matricula3" text="S19543210" GridPane.rowIndex="3" />
-            <Label fx:id="nombre3" text="Pedro Gómez" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="matricula2" text="S20789101" GridPane.rowIndex="3" />
+            <Label fx:id="nombre2" text="María López" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="matricula3" text="S19543210" GridPane.rowIndex="5" />
+            <Label fx:id="nombre3" text="Pedro Gómez" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <ComboBox fx:id="cbDia1" disable="true" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cbDia2" disable="true" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ComboBox fx:id="cbDia3" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbDia2" disable="true" prefWidth="150.0" promptText="19" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbDia3" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <ComboBox fx:id="cbMes1" disable="true" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cbMes2" disable="true" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <ComboBox fx:id="cbMes3" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbMes2" disable="true" prefWidth="150.0" promptText="Septiembre" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbMes3" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
             <ComboBox fx:id="cbHrI1" disable="true" prefWidth="150.0" promptText="10:00" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cbHrI2" disable="true" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <ComboBox fx:id="cbHrI3" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbHrI2" disable="true" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbHrI3" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
             <ComboBox fx:id="cbHrF1" disable="true" prefWidth="150.0" promptText="10:30" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cbHrF2" disable="true" prefWidth="150.0" promptText="11:00" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <ComboBox fx:id="cbHrF3" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <ComboBox fx:id="cbModalidad1" disable="true" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cbModalidad2" disable="true" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <ComboBox fx:id="cbModalidad3" prefWidth="150.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbHrF2" disable="true" prefWidth="150.0" promptText="11:00" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbHrF3" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <ComboBox fx:id="cbModalidad1" disable="true" prefWidth="150.0" promptText="En línea" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cbModalidad2" disable="true" prefWidth="150.0" promptText="Presencial" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbModalidad3" prefWidth="150.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
             <ComboBox fx:id="cbLugar1" disable="true" prefWidth="150.0" promptText="F103" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cbLugar2" disable="true" prefWidth="150.0" promptText="CC1" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <ComboBox fx:id="cbLugar3" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbLugar2" disable="true" prefWidth="150.0" promptText="CC1" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbLugar3" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
             <Label text="Lugar" GridPane.columnIndex="6" />
+            <Label fx:id="lbVinculo1" disable="true" text="Vínculo de la reunión: " GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="tfVinculo1" disable="true" text="https://teams.microsoft.com/l/meetup-join" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <TextField fx:id="tfVinculo2" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <TextField fx:id="tfVinculo3" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <Label fx:id="lbVinculo2" text="Vínculo de la reunión: " GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label fx:id="lbVinculo3" text="Vínculo de la reunión: " GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Button fx:id="btnGuardar" layoutX="1033.0" layoutY="786.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="350.0">
+      <Button fx:id="btnGuardar" layoutX="1033.0" layoutY="786.0" mnemonicParsing="false" onAction="#guardar" style="-fx-background-color: #4caf50;" text="Guardar" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="350.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnRegresar" layoutX="348.0" layoutY="786.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="350.0">
+      <Button fx:id="btnRegresar" layoutX="348.0" layoutY="786.0" mnemonicParsing="false" onAction="#regresar" style="-fx-background-color: #0288D2;" text="Regresar" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="350.0">
          <font>
             <Font size="20.0" />
          </font>
