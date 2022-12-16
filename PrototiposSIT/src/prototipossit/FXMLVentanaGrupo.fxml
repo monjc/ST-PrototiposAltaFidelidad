@@ -18,7 +18,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <ComboBox fx:id="cbPeriodo" prefWidth="150.0">
+            <ComboBox fx:id="cbPeriodo" prefWidth="215.0" promptText="Agosto 2022 - Enero 2023">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
@@ -28,7 +28,7 @@
                   <Font size="15.0" />
                </font>
                <HBox.margin>
-                  <Insets left="160.0" />
+                  <Insets left="140.0" />
                </HBox.margin>
             </Label>
             <ComboBox fx:id="cbSesion" prefHeight="25.0" prefWidth="55.0" promptText="1">
@@ -41,7 +41,7 @@
                   <Font size="15.0" />
                </font>
                <HBox.margin>
-                  <Insets left="160.0" />
+                  <Insets left="140.0" />
                </HBox.margin>
             </Label>
             <ComboBox fx:id="cbProgramaEducativo" prefHeight="25.0" prefWidth="213.0" promptText="Tecnologías Computacionales">
